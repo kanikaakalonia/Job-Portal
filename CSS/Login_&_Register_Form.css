@@ -1,0 +1,182 @@
+/*Login & Register Form*/
+/* Full-width input fields */
+input[type=text], input[type=password]
+{
+	width: 100%;
+	margin: 10px 0;
+	padding: 12px 20px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 20px;
+	background-color:#ddd;
+}
+
+.name input[type=text]
+{
+	width: 46%;
+	margin: 8px 0;
+	padding: 12px 20px;
+	display: inline-block;
+	border: 1px solid #ccc;
+	box-sizing: border-box;
+	font-size: 18px;
+	background-color:#ddd;
+}
+
+input[type=text]:focus, input[type=password]:focus{background-color:white;}
+.name input[type=text]:focus{background-color:white;}
+
+/* Set a style for register & login button */
+.lrbtn
+{
+	background-color: blue;
+	color: white;
+	padding: 12px 20px;
+	margin: 8px 0;
+	border: none;
+	cursor: pointer;
+	width: 100%;
+	opacity: 0.8;
+	font-size: 18px;
+}
+
+.lrbtn:hover {opacity: 1;}
+
+.btn-group button
+{
+	background-color: #ffffff00;
+  	border: none;
+  	color: white; /* White text */
+  	padding: 6px 24px; /* Some padding */
+  	cursor: pointer; /* Pointer/hand icon */
+  	float: left; /* Float the buttons side by side */
+	width:49%;
+	font-size:20px;
+}
+
+/* Clear floats (clearfix hack)*/
+.btn-group:after
+{
+  	content: "";
+  	clear: both;
+  	display: table;
+}
+
+.btn-group .p1l
+{
+	border-bottom:1px solid white; 
+	font-weight:bold;
+	font-size:20px;
+	margin-top:30px;
+}
+
+.btn-group .p2l
+{
+	font-weight:bold;
+	font-size:20px;
+	margin-top:30px;
+}
+
+.modal hr 
+{
+  	border: 1px solid yellow;
+  	margin-bottom: 25px;
+}
+
+.containerL {padding: 16px;display:none;}
+.containerR {padding: 16px;}
+
+
+label{font-size:18px;}
+
+.heading
+{
+	text-align: center;
+	margin: 20px 0 12px 0;
+	position: relative
+}
+
+p .psw
+{
+	float: right;
+	padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal
+{
+	display: none; /* Hidden by default */
+	position: fixed; /* Stay in place */
+	z-index: 1; /* Sit on top */
+	left: 0;
+	top: 0;
+	width: 100%; /* Full width */
+	height: 100%; /* Full height */
+	overflow: auto;  /*Enable scroll if needed */
+ 	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+	padding-top: 30px;
+}
+
+/* Modal Content/Box */
+.modal-content
+{
+	background-color: #fefefe;
+	margin: 1% auto 5% auto; /* 1% from the top, 5% from the bottom and centered */
+	border: 1px solid #888;
+	width: 35%; /* Could be more or less, depending on screen size */
+	color:white;
+}
+
+/* The Close Button (x) */
+.close
+{
+	position: absolute;
+	color:white;
+	right: 25px;
+	top: 0;
+	font-size: 35px;
+	font-weight: bold;
+}
+
+.close:hover, close:focus {color: red;cursor: pointer;}
+
+/* Set a grey background color and center the text of the "sign up" section */
+.signup
+{
+  	background-color: lightblue;
+  	text-align: center;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin 
+{
+  	background-color: lightblue;
+  	text-align: center;
+}
+
+/* Add Zoom Animation */
+.animate {-webkit-animation: animatezoom 0.6s;animation: animatezoom 0.6s;}
+
+@-webkit-keyframes animatezoom 
+{
+	from {-webkit-transform: scale(0)} 
+	to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom
+{
+	from {transform: scale(0)} 
+	to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px)
+{
+	p .psw 
+	{
+		display: block;
+		float: none;
+	}
+}

@@ -1,0 +1,192 @@
+.leftdiv{float: left;}
+.rightdiv{float: right;}
+body {font-family: Arial, Helvetica, sans-serif;margin: 0;}
+hr {border-top: 2px solid blue;}
+html {scroll-behavior: smooth;}
+
+/*Placement*/
+div1
+{
+	width: 100%;
+	background-color: #301934;
+	border: 2px solid white;
+}
+
+/*button*/
+div2
+{
+	width: 100%;
+	background-color: #454545;
+	border: 2px solid white;
+	float: left;
+	height: 8.5%;
+	border-top: none;
+}
+
+/*Slideshow*/
+div3
+{
+	background-color: lightblue;    
+	width: 100%;
+	border: 2px solid white;
+	border-top: none;
+}
+
+/*AboutUs & Feedback*/
+div4
+{
+	background-color: #301934;
+	width: 100%;	
+	border:  2px solid white;
+	color: white;	
+	border-top: none;
+}
+
+/*About Us & Feedback*/
+div5
+{
+	background-color: #301934;    
+	width: 70%;
+	color: white;	
+}
+
+/*Image*/
+div6
+{
+	background-color: #301934;
+	width: 30%;
+	color: white;	
+}
+
+/*Showcase*/
+div7
+{
+	color: black;
+	background-color: #008080;   
+	width: 100%;
+	border:2px solid white;
+	border-top: none;
+}
+
+/*Footer*/
+div8
+{
+	color: blue;
+	background-color: #808080;
+	width: 100%;
+	border: 2px solid white;
+	border-top: none;
+}
+
+/*Placement*/
+.p1
+{
+	float: left;
+	margin-top: 2%;
+	margin-left: 8px;
+	color: yellow;
+	font-size: 32px;
+}
+
+.p1::first-letter{font-size: 44px;}
+
+/*AboutUs*/
+.p2
+{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	color: white;
+	margin-left: 10px;
+	text-align: jusitfy;
+}
+
+/*Advertisement*/
+.img1 
+{
+	height:550px;
+	width: 95%;
+	margin-left: 3%;
+	margin-right: 2%;
+	border: 1px solid black;
+}
+
+/*sidenav Home Button*/
+.b1
+{
+	font-size:18px;
+	cursor:pointer;
+	color:yellow;
+	font-weight: bold;
+	margin-top: 4px;
+	padding:11px 20px;
+}
+
+.b1:hover {color: lightblue;border-bottom: 1px solid white;border-top: 1px solid white;}
+
+/*Right side upper arrow*/
+#upper
+{
+	background-color: red;
+	width: 50px;
+	height: 50px;
+  	position: fixed;
+	color: white;
+  	bottom: 8px;
+  	display: block;
+	margin-top:5px;
+	margin-bottom: auto;
+  	transition: bottom 0.3s;
+	text-align: center;
+	border-radius:4px;
+}
+
+#upper a 
+{
+  	display: block;
+  	color: white;
+  	text-decoration: none;
+}
+
+#upper:hover {background-color: blue;}
+
+/*Caps lock warning in registration and login form*/
+#text{display:none;color:yellow;font-size:13px;}
+#text1{display:none;color:yellow;font-size:13px;}
+#text2{display:none;color:yellow;font-size:13px;}
+
+/*Read more button in about us*/
+#more{display:none;}
+
+.more_less
+{
+	background-color:lightblue;
+	margin-left:10px;
+	padding:12px 20px;
+	color: white;
+	font-weight: bold;
+	border-radius:6px;
+}
+
+.more_less:hover{background-color:green;}
+
+/*Buttons*/
+.dropdown 
+{
+  	position: relative;
+  	display: inline-block;
+	margin-right: 10px;;
+}
+
+.dropbtn 
+{
+	background-color: #ffffff00;
+	color: yellow;
+	padding: 13px 18px;
+	font-size: 18px;
+	border: none;
+	cursor: pointer;
+	font-weight: bold;
+	margin-top: 4px;
+}
+
+.dropbtn:hover{color: lightblue;border-bottom: 1px solid white;border-top: 1px solid white;}

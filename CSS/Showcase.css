@@ -1,0 +1,50 @@
+#product
+{
+	text-align:center;
+	ackground-color: #21816c;
+}
+
+#product .pro
+{
+	padding-top: 15px;
+	padding-bottom: 0px;
+	width:25%;
+	height:12%;
+	border: 2px solid black;
+	background-color: #cbd2d2;
+	cursor:pointer;
+	/*box-shadow: 20px 20px 30px #292a35;
+	border-radius:12px;*/
+	margin: 5px 0;
+	position:relative;
+}
+
+#product .pro img
+{
+	width: 90%;
+	height:20vh;
+}
+
+#product .pro button
+{
+	width: 100%;
+	height:10%;
+	background-color: #2196f3;
+	/*border-radius: 12px;*/
+	border: 1px solid white;
+	padding-top: 7px;
+	padding-bottom: 0px;
+	margin-bottom: 0px;
+	text-decoration: none;
+}
+
+#product .pro button:hover {background-color: #808080;color:white;}
+
+.section-p1{padding: 20px 40px;}
+
+#product .containerpro
+{
+	display : flex;
+	justify-content: space-around;
+	padding-top: 15px;
+}
