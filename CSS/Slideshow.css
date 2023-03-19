@@ -144,5 +144,5 @@
 	.numbertext,
 	.prev,
     	.next,
-	.text {font-size: 11px}
+	.text {font-size: 11px;padding:6px 10px;}
 }
