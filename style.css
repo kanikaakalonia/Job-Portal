@@ -1,192 +1,79 @@
 .leftdiv{float: left;}
 .rightdiv{float: right;}
 body {font-family: Arial, Helvetica, sans-serif;margin: 0;}
-hr {border-top: 2px solid blue;}
 html {scroll-behavior: smooth;}
 
-/*Placement*/
-div1
+.header
 {
 	width: 100%;
-	background-color: #301934;
-	border: 2px solid white;
+	background-color: white;
+	border-bottom: 2px solid grey;
 }
 
-/*button*/
-div2
+.searchbar
 {
-	width: 100%;
-	background-color: #454545;
-	border: 2px solid white;
-	float: left;
-	height: 8.5%;
-	border-top: none;
+	width:100%;
+	background-color:white;
 }
+
+.searchbar input[type=text]
+{
+	width:36%;
+	padding:14px;
+	border: 1px solid lightblue;
+	border-right:none;
+	/*font-size: 18px;*/
+	border-radius:4px;
+	background-color:white;
+	margin-bottom: 1.8%;
+	margin-top: 2.5%;
+}
+
+.searchbar span
+{
+	width:10%;
+	padding:16.5px;
+	background-color: blue;
+	margin-left:-1%;
+	border: 1px solid lightblue;
+	border-left:none;
+	border-radius:4px;
+	opacity:0.6;
+}
+
+.searchbar input[type=text]:focus{border:1px solid black;}
+.searchbar span:hover{opacity:1;}
 
 /*Slideshow*/
-div3
+.slideshow
 {
-	background-color: lightblue;    
+	background-color: white;    
 	width: 100%;
-	border: 2px solid white;
-	border-top: none;
+	border: none;
+	overflow:hidden;
 }
 
-/*AboutUs & Feedback*/
-div4
+/*space*/
+.space
 {
-	background-color: #301934;
-	width: 100%;	
-	border:  2px solid white;
-	color: white;	
-	border-top: none;
-}
-
-/*About Us & Feedback*/
-div5
-{
-	background-color: #301934;    
-	width: 70%;
-	color: white;	
-}
-
-/*Image*/
-div6
-{
-	background-color: #301934;
-	width: 30%;
-	color: white;	
+	width:100%;
+	height: 7%;
 }
 
 /*Showcase*/
-div7
+.showcase
 {
 	color: black;
-	background-color: #008080;   
+	background-color: whie;   
 	width: 100%;
-	border:2px solid white;
-	border-top: none;
+	border:none;
 }
 
 /*Footer*/
-div8
+.footer
 {
 	color: blue;
 	background-color: #808080;
 	width: 100%;
-	border: 2px solid white;
-	border-top: none;
+	border-top:2px solid grey;
 }
-
-/*Placement*/
-.p1
-{
-	float: left;
-	margin-top: 2%;
-	margin-left: 8px;
-	color: yellow;
-	font-size: 32px;
-}
-
-.p1::first-letter{font-size: 44px;}
-
-/*AboutUs*/
-.p2
-{
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 18px;
-	color: white;
-	margin-left: 10px;
-	text-align: jusitfy;
-}
-
-/*Advertisement*/
-.img1 
-{
-	height:550px;
-	width: 95%;
-	margin-left: 3%;
-	margin-right: 2%;
-	border: 1px solid black;
-}
-
-/*sidenav Home Button*/
-.b1
-{
-	font-size:18px;
-	cursor:pointer;
-	color:yellow;
-	font-weight: bold;
-	margin-top: 4px;
-	padding:11px 20px;
-}
-
-.b1:hover {color: lightblue;border-bottom: 1px solid white;border-top: 1px solid white;}
-
-/*Right side upper arrow*/
-#upper
-{
-	background-color: red;
-	width: 50px;
-	height: 50px;
-  	position: fixed;
-	color: white;
-  	bottom: 8px;
-  	display: block;
-	margin-top:5px;
-	margin-bottom: auto;
-  	transition: bottom 0.3s;
-	text-align: center;
-	border-radius:4px;
-}
-
-#upper a 
-{
-  	display: block;
-  	color: white;
-  	text-decoration: none;
-}
-
-#upper:hover {background-color: blue;}
-
-/*Caps lock warning in registration and login form*/
-#text{display:none;color:yellow;font-size:13px;}
-#text1{display:none;color:yellow;font-size:13px;}
-#text2{display:none;color:yellow;font-size:13px;}
-
-/*Read more button in about us*/
-#more{display:none;}
-
-.more_less
-{
-	background-color:lightblue;
-	margin-left:10px;
-	padding:12px 20px;
-	color: white;
-	font-weight: bold;
-	border-radius:6px;
-}
-
-.more_less:hover{background-color:green;}
-
-/*Buttons*/
-.dropdown 
-{
-  	position: relative;
-  	display: inline-block;
-	margin-right: 10px;;
-}
-
-.dropbtn 
-{
-	background-color: #ffffff00;
-	color: yellow;
-	padding: 13px 18px;
-	font-size: 18px;
-	border: none;
-	cursor: pointer;
-	font-weight: bold;
-	margin-top: 4px;
-}
-
-.dropbtn:hover{color: lightblue;border-bottom: 1px solid white;border-top: 1px solid white;}
