@@ -3,24 +3,24 @@
 input[type=text], input[type=password]
 {
 	width: 100%;
-	margin: 10px 0;
-	padding: 12px 20px;
+	margin: 0.3% 0;
+	padding: 10px 20px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-	font-size: 20px;
+	font-size: 17px;
 	background-color:#ddd;
 }
 
 .name input[type=text]
 {
 	width: 46%;
-	margin: 8px 0;
-	padding: 12px 20px;
+	margin: 0.2% 0;
+	padding: 10px 20px;
 	display: inline-block;
 	border: 1px solid #ccc;
 	box-sizing: border-box;
-	font-size: 18px;
+	font-size: 14px;
 	background-color:#ddd;
 }
 
@@ -32,13 +32,13 @@ input[type=text]:focus, input[type=password]:focus{background-color:white;}
 {
 	background-color: blue;
 	color: white;
-	padding: 12px 20px;
-	margin: 8px 0;
+	padding: 10px 20px;
+	margin: 0.5% 0;
 	border: none;
 	cursor: pointer;
 	width: 100%;
 	opacity: 0.8;
-	font-size: 18px;
+	font-size: 14px;
 }
 
 .lrbtn:hover {opacity: 1;}
@@ -47,12 +47,12 @@ input[type=text]:focus, input[type=password]:focus{background-color:white;}
 {
 	background-color: #ffffff00;
   	border: none;
-  	color: white; /* White text */
+  	color: black;
   	padding: 6px 24px; /* Some padding */
   	cursor: pointer; /* Pointer/hand icon */
   	float: left; /* Float the buttons side by side */
 	width:49%;
-	font-size:20px;
+	font-size:17px;
 }
 
 /* Clear floats (clearfix hack)*/
@@ -65,27 +65,26 @@ input[type=text]:focus, input[type=password]:focus{background-color:white;}
 
 .btn-group .p1l
 {
-	border-bottom:1px solid white; 
+	border-bottom:1px solid blue; 
 	font-weight:bold;
-	font-size:20px;
-	margin-top:30px;
+	margin-top:2.5%;
+	color:blue;
 }
 
 .btn-group .p2l
 {
 	font-weight:bold;
-	font-size:20px;
-	margin-top:30px;
+	margin-top:2.5%;
 }
 
 .modal hr 
 {
-  	border: 1px solid yellow;
-  	margin-bottom: 25px;
+  	border: 1px solid black;
+  	margin-bottom: 1.7%;
 }
 
-.containerL {padding: 16px;display:none;}
-.containerR {padding: 16px;}
+.containerL {padding: 14px;display:none;}
+.containerR {padding: 14px;}
 
 
 label{font-size:18px;}
@@ -93,14 +92,14 @@ label{font-size:18px;}
 .heading
 {
 	text-align: center;
-	margin: 20px 0 12px 0;
+	margin: 17px 0 12px 0;
 	position: relative
 }
 
 p .psw
 {
 	float: right;
-	padding-top: 16px;
+	padding-top: 14px;
 }
 
 /* The Modal (background) */
@@ -108,7 +107,7 @@ p .psw
 {
 	display: none; /* Hidden by default */
 	position: fixed; /* Stay in place */
-	z-index: 1; /* Sit on top */
+	z-index: 10; /* Sit on top */
 	left: 0;
 	top: 0;
 	width: 100%; /* Full width */
@@ -116,31 +115,37 @@ p .psw
 	overflow: auto;  /*Enable scroll if needed */
  	background-color: rgb(0,0,0); /* Fallback color */
 	background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-	padding-top: 30px;
+	padding-top: 2%;
 }
 
 /* Modal Content/Box */
 .modal-content
 {
 	background-color: #fefefe;
-	margin: 1% auto 5% auto; /* 1% from the top, 5% from the bottom and centered */
+	margin: 2% auto 5% auto; /* 2% from the top, 5% from the bottom and centered */
 	border: 1px solid #888;
-	width: 35%; /* Could be more or less, depending on screen size */
-	color:white;
+	width: 30%; /* Could be more or less, depending on screen size */
+	color:black;
+	border-radius:6px;
 }
 
 /* The Close Button (x) */
 .close
 {
 	position: absolute;
-	color:white;
-	right: 25px;
+	color:black;
+	right: 2.1%;
 	top: 0;
-	font-size: 35px;
+	font-size: 30px;
 	font-weight: bold;
 }
 
 .close:hover, close:focus {color: red;cursor: pointer;}
+
+/*Caps lock warning in registration and login form*/
+#text{display:none;color:red;font-size:11px;margin-bottom:2px;font-weight:bold;}
+#text1{display:none;color:red;font-size:11px;margin-bottom:2px;font-weight:bold;}
+#text2{display:none;color:red;font-size:11px;margin-bottom:2px;font-weight:bold;}
 
 /* Set a grey background color and center the text of the "sign up" section */
 .signup
@@ -171,7 +176,6 @@ p .psw
 	to {transform: scale(1)}
 }
 
-/* Change styles for span and cancel button on extra small screens */
 @media screen and (max-width: 300px)
 {
 	p .psw 
@@ -179,4 +183,8 @@ p .psw
 		display: block;
 		float: none;
 	}
+	.lrbtn{font-size:11px;}
+	.btn-group button {font-size:11px;}
+	input[type=text], input[type=password]{font-size:11px;}
+	.name input[type=text]{font-size:11px;}
 }
