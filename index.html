@@ -1,68 +1,41 @@
 <html>
 <head>
-	<meta name = "viewport" content = "width=device-width, initial-scale=1">
-	<title>Placement Management System</title>
+	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
+	<title>Project2.0</title>
 	<link rel = "stylesheet" href = "style.css">
+	<link rel = "stylesheet" href = "CSS/Button.css">
+	<link rel = "stylesheet" href = "CSS/Login_&_Register_Form.css">
+	<link rel = "stylesheet" href = "CSS/Slideshow.css">
+	<link rel = "stylesheet" href = "CSS/Footer.css">
+	<link rel = "stylesheet" href = "CSS/Showcase.css">
 	<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
 
-<!--PLacement-->
-<div1 class = "leftdiv" id = "Home">
-	<img style = "margin-left: 10px;overflow: hidden;border-radius:50%;border:2px solid yellow;" class = "leftdiv" src = "Images/Placement.jpg" height = "110" width = "110"> </img>
-	<span class = "p1">PLACEMENT</span>
-	<span class = "p1">MANAGEMENT</span>
-	<span class = "p1">SYSTEM</span>
-</div1>
-
-<!--Button & Side navigation bar-->
-<div2>
-	<!--Side navigation bar-->
-	<link rel = "stylesheet" href = "CSS/sidenav.css">
-	<div id = "mySidenav" class = "sidenav leftdiv">
-		<a href="javascript:void(0)" class = "closebtn a1" onclick ="closeNav()">&times;</a>
-		<a href="#" class = "a2">All Company</a>
-		<a href="#" class = "a2">All Jobs</a>
-	</div>
-	<script>
-		function openNav() 
-		{
-  			document.getElementById("mySidenav").style.width = "250px";
-		}
-
-		function closeNav() 
-		{
-			document.getElementById("mySidenav").style.width = "0";
-		}
-	</script>
-
-	<span class = "b1 leftdiv" onclick = "openNav()"><b>&#x2630; Home</b></span>
+<!--Header-->
+<div class = "header leftdiv" id = "Home">
+	<span class = "leftdiv dropbtn" onclick = "location.href = 'project2.0.html'" style = "margin-left: 7%;border-right:none;font-weight:bold;">
+		<span style = "color:blue;">PRO</span><span style = "color:black;">JECT</span>
+	</span>
 
 	<!--Buttons-->
 	<div class = "rightdiv">
-		<div class ="dropdown">
-			<button class = "dropbtn" onclick="location.href ='#AboutUs'">
-				<i class="fa fa-info-circle"></i> About Us
-			</button>
-		</div>
+		<button class = "dropbtn" onclick = "location.href = '#'">
+			<i class="fa fa-building"></i> All Company
+		</button>
 
-		<div class ="dropdown">
-			<button class = "dropbtn" onclick="location.href ='#Feedback'">
-				<i class="fa fa-envelope"></i> Feedback
-			</button>
-		</div>
+		<button class = "dropbtn" onclick = "location.href = '#'">
+			<i class="fa fa-briefcase"></i> All Jobs
+		</button>
 
-		<link rel = "stylesheet" href = "CSS/Login_&_Register_Form.css">
-		<!--Register Form-->
-		<div class ="dropdown">
+		<div class = "dropdown">
 			<button class = "dropbtn" onclick = "document.getElementById('id00').style.display = 'block'">
-				<i class="fa fa-user-plus"></i> Register
+				<i class = "fa fa-user-plus"></i> Register
 			</button>
 
 			<div id = "id00" class = "modal">
-				<form class = "modal-content animate" action = "#" method = "post" style = "background-image: url('Images/try.jpeg');">
+				<form class = "modal-content animate" action = "#" method = "post">
 					<div class = "heading">
-						<h2>Registration Form </h2>
 						<span onclick = "document.getElementById('id00').style.display='none'" class = "close" title="Close">&times;</span>
 					</div>
 		
@@ -74,16 +47,16 @@
 
       					<label for = "psw"><b>Password : </b></label><br>
      		 				<input type = "password" placeholder = "Must be atleast six characters" name = "psw" id = "myshow" required>
-						<input type = "checkbox" onclick = "myshowpsw()" style = "font-size:13px;">Show Password
+						<input type = "checkbox" onclick = "myshowpsw()" style = "font-size:11p;">Show Password
 
       	  				<br><br>
 						
 						<div class = "name"> 
       						<label for ="firstname"><b>First name: </b></label>
-							<label for ="lastname" style = "margin-left:160px;"><b>Last name: </b></label><br>
+							<label for ="lastname" style = "margin-left:33%;"><b>Last name: </b></label><br>
 			
      		 					<input type = "text" placeholder = "John" name = "firstname" required>
-     		 					<input type = "text" placeholder = "dae" name = "lastname" style = "margin-left: 20px;" required>
+     		 					<input type = "text" placeholder = "dae" name = "lastname" class = "rightdiv" required>
 						</div>
 
 						<hr>
@@ -141,12 +114,12 @@
 
 		<!--Login Form-->
 		<div class = "dropdown">
-			<button class = "dropbtn" onclick = "document.getElementById('id01').style.display = 'block'; document.getElementById('lb1').style.display = 'block';">
+			<button class = "dropbtn" style = "border-right:none;" onclick = "document.getElementById('id01').style.display = 'block'; document.getElementById('lb1').style.display = 'block';">
 				<i class = "fa fa-sign-in"></i> Login</i>
 			</button>	
 
 			<div id = "id01" class = "modal">
-				<form class = "modal-content animate" action = "#" method = "post" style = "background-image: url('Images/try1.jpeg');">
+				<form class = "modal-content animate" action = "#" method = "post">
 					<div class = "heading">
 						<span onclick = "document.getElementById('id01').style.display = 'none'" class = "close" title = "Close">&times;</span>	
 					</div>
@@ -168,9 +141,8 @@
       					<label for = "psw"><b>Password : </b></label><br>
      		 				<input type = "password" placeholder = "Must be atleast six characters" name = "psw" id = "myshow1" required>
       	  				<input type = "checkbox" onclick = "myshowpsw1()" style = "font-size:13px;">Show Password
-						<br>
 
-						<p class = "psw" style = "float:right;">Forgot <a href = "#" style = "color:yellow"> Password?</a></p>
+						<p class = "psw" style = "float:right;">Forgot <a href = "#" style = "color:blue"> Password?</a></p>
      						<button class = "lrbtn" type = "submit">Login</button>
 
      						<label>
@@ -178,7 +150,7 @@
      						</label>
 
 						<div class = "containerR signup">
-    							<p style = "color: black;">New to Hire-On? <a href = "#" onclick = "document.getElementById('id00').style.display = 'block'; 											document.getElementById('id01').style.display = 'none'">Register</a></p>
+    							<p style = "color: black;">New to Project? <a href = "#" onclick = "document.getElementById('id00').style.display = 'block'; 											document.getElementById('id01').style.display = 'none'">Register</a></p>
  						</div>
     					</div>
 
@@ -193,7 +165,7 @@
      		 				<input type = "password" placeholder = "Must be atleast six characters" name = "psw" id = "myshow2" required>
       	  				<input type = "checkbox" onclick = "myshowpsw2()" style = "font-size:13px;">Show Password
 
-						<br><p class = "psw" style = "float:right;">Forgot <a href = "#" style = "color:yellow"> Password?</a></p><br><br>
+						<br><p class = "psw" style = "float:right;">Forgot <a href = "#" style = "color:blue"> Password?</a></p><br><br>
 
 						<label for = "securtiy"><b>Securtiy Key : </b></label><br>
       					<input type = "password" placeholder = "Security key" name = "security" id = "mykey" required>
@@ -202,7 +174,7 @@
      						<button class = "lrbtn" type = "submit">Login</button>
 
 						<div class = "containerR signup">
-    							<p style = "color: black;">New to Hire-On? <a href = "#" onclick = "document.getElementById('id00').style.display = 'block'; 											document.getElementById('id01').style.display = 'none'">Register</a></p>
+    							<p style = "color: black;">New to Project? <a href = "#" onclick = "document.getElementById('id00').style.display = 'block'; 											document.getElementById('id01').style.display = 'none'">Register</a></p>
  						</div>
     					</div>
   				</form>
@@ -292,239 +264,313 @@
 
 			function mylb1()
 			{
-  				document.getElementById("lb1").style.borderBottom = "1px solid white";
+  				document.getElementById("lb1").style.borderBottom = "1px solid blue";
+				document.getElementById("lb1").style.color = "blue";
+				document.getElementById("lb2").style.color = "black";
 				document.getElementById("lb2").style.borderBottom = "none";
 			}
 
 			function mylb2()
 			{
-				document.getElementById("lb2").style.borderBottom = "1px solid white";
+				document.getElementById("lb2").style.borderBottom = "1px solid blue";
+				document.getElementById("lb2").style.color = "blue";
 				document.getElementById("lb1").style.borderBottom = "none";
+				document.getElementById("lb1").style.color = "black";
 			}
 		</script>
 	</div>
-</div2>
+</div>
+
+<!--Search bar-->
+<div class = "leftdiv searchbar">
+	<form>
+		<center>
+		<input type = "text" placeholder = "What are you looking for?">
+		<span onclick = "#"><i class = "fa fa-search" style = "font-size:x-large;font-weight:bold;text-align:center;color:white;"></i></span>
+		</center>
+	</form>
+</div>
 
 <!--Slideshow-->
-<div3 class = "leftdiv">
-	<link rel="stylesheet" href="CSS/Slideshow.css">
-	<div class="slideshow-container">
-		<div class="mySlides ">
-			<div class="numbertext">1/4</div>
-			<img src="Images/Placement1.jpg" style="width:100%;height:100%;">
+<div class = "leftdiv slideshow">
+	<div class = "leftdiv slideshow-container1">
+		<div class = "mySlides1 animationR">
+			<img src = "Images/Placement4.jpg" style = "width:100%;height:94%;border-radius:6px;" onclick = "prevSlide1();prevSlide2();prevSlide3();">
 		</div>
 
-		<div class="mySlides fade">
-			<div class="numbertext">2/4</div>
-			<img src="Images/Placement2.jpg" style="width:100%;height:100%;">
+		<div class = "mySlides1 animationR">
+			<img src = "Images/Placement1.jpg" style = "width:100%;height:94%;border-radius:6px;" onclick = "prevSlide1();prevSlide2();prevSlide3();">
 		</div>
 
-		<div class="mySlides fade">
-			<div class="numbertext">3/4</div>
-			<img src="Images/Placement3.jpg" style="width:100%;height:100%;">
+		<div class = "mySlides1 animationR">
+			<img src = "Images/Placement2.jpg" style = "width:100%;height:94%;border-radius:6px;" onclick = "prevSlide1();prevSlide2();prevSlide3();">
 		</div>
 		
-		<div class="mySlides fade">
-			<div class="numbertext">4/4</div>
-			<img src="Images/Placement4.jpg" style="width:100%;height:100%;">
+		<div class = "mySlides1 animationR">
+			<img src = "Images/Placement3.jpg" style = "width:100%;height:94%;border-radius:6px;" onclick = "prevSlide1();prevSlide2();prevSlide3();">
 		</div>
 
-		<div style="text-align:center;margin-top: -5vh;z-index:2;">
-			<span class="dot"></span> 		
-			<span class="dot"></span> 
-			<span class="dot"></span> 
-			<span class="dot"></span> 
+		<div style = "text-align:center;margin-top:-5vh;z-index:2;">
+			<span class = "dot1"></span> 		
+			<span class = "dot1"></span> 
+			<span class = "dot1"></span> 
+			<span class = "dot1"></span> 
+		</div>
+	</div>
+	<div class = "leftdiv slideshow-container2">
+		<div class = "mySlides2 animationR">
+			<div class = "numbertext">1/4</div>
+			<img src = "Images/Placement1.jpg" style = "width:100%;height:94%;border-radius:6px;">
 		</div>
 
-		<a class="prev" onclick="prevSlide()">&#10094;</a>
-		<a class="next" onclick="showSlides()">&#10095;</a>
+		<div class = "mySlides2 animationR">
+			<div class = "numbertext">2/4</div>
+			<img src = "Images/Placement2.jpg" style = "width:100%;height:94%;border-radius:6px;">
+		</div>
+
+		<div class = "mySlides2 animationR">
+			<div class = "numbertext">3/4</div>
+			<img src = "Images/Placement3.jpg" style = "width:100%;height:94%;border-radius:6px;">
+		</div>
+		
+		<div class = "mySlides2 animationR">
+			<div class = "numbertext">4/4</div>
+			<img src = "Images/Placement4.jpg" style = "width:100%;height:94%;border-radius:6px;">
+		</div>
+
+		<div style = "text-align:center;margin-top:5px;z-index:2;">
+			<span class = "dot2"></span> 		
+			<span class = "dot2"></span> 
+			<span class = "dot2"></span> 
+			<span class = "dot2"></span> 
+		</div>
+
+		<a class = "prev" onclick = "prevSlide1();prevSlide2();preSlide3();">&#10094;</a>
+		<a class = "next" onclick = "showSlides1();showSlides2();showSlides3();">&#10095;</a>
+	</div>
+	<div class = "leftdiv slideshow-container3">
+		<div class = "mySlides3 animationR">
+			<img src = "Images/Placement2.jpg" style = "width:100%;height:94%;border-radius:6px;" onclick = "showSlides1();showSlides2();showSlides3();">
+		</div>
+
+		<div class = "mySlides3 animationR">
+			<img src = "Images/Placement3.jpg" style = "width:100%;height:94%;border-radius:6px;" onclick = "showSlides1();showSlides2();showSlides3();">
+		</div>
+
+		<div class = "mySlides3 animationR">
+			<img src = "Images/Placement4.jpg" style = "width:100%;height:94%;border-radius:6px;" onclick = "showSlides1();showSlides2();showSlides3();">
+		</div>
+		
+		<div class = "mySlides3 animationR">
+			<img src = "Images/Placement1.jpg" style = "width:100%;height:94%;border-radius:6px;" onclick = "showSlides1();showSlides2();showSlides3();">
+		</div>
+
+		<div style = "text-align:center;margin-top:-5vh;z-index:2;">
+			<span class = "dot3"></span> 		
+			<span class = "dot3"></span> 
+			<span class = "dot3"></span> 
+			<span class = "dot3"></span> 
+		</div>
 	</div>
 	<script>
-		var timeOut = 100;
-		var slideIndex = 0;
-		var autoOn = true;
+		var timeOut1 = 100;
+		var slideIndex1 = 0;
+		var autoOn1 = true;
 	
-		autoSlides();
-		function autoSlides() 
+		autoSlides1();
+		function autoSlides1() 
 		{
-            	timeOut = timeOut - 20;
-			if (autoOn == true && timeOut < 0)
+            	timeOut1 = timeOut1 - 20;
+			if (autoOn1 == true && timeOut1 < 0)
 			{
-				showSlides();
+				showSlides1();
 			}
-			setTimeout(autoSlides, 20);
+			setTimeout(autoSlides1 , 20);
 		}
 
-		function prevSlide() 
+		function prevSlide1() 
 		{
-			timeOut = 2000;
-			var slides = document.getElementsByClassName("mySlides");
-			dots = document.getElementsByClassName("dot");
+			timeOut1 = 2000;
+			var slides1 = document.getElementsByClassName("mySlides1");
+			dots1 = document.getElementsByClassName("dot1");
 
-			for (i = 0; i < slides.length; i++) 
+			for (i = 0; i < slides1.length; i++) 
 			{
-				slides[i].style.display = "none";
-				dots[i].className = dots[i].className.replace(" active", "");
+				slides1[i].style.display = "none";
+				dots1[i].className = dots1[i].className.replace(" active", "");
 			}
-			slideIndex--;
+			slideIndex1--;
 		
-			if (slideIndex > slides.length) {slideIndex = 1}
-			if (slideIndex == 0) {slideIndex = 4}
+			if (slideIndex1 > slides1.length) {slideIndex1 = 1}
+			if (slideIndex1 == 0) {slideIndex1 = 4}
 
-			slides[slideIndex - 1].style.display = "block";
-			dots[slideIndex - 1].className += " active";
+			slides1[slideIndex1 - 1].style.display = "block";
+			dots1[slideIndex1 - 1].className += " active";
 		}
 		
-		function showSlides()
+		function showSlides1()
 		{
-			timeOut = 2000;
-			var slides = document.getElementsByClassName("mySlides");
-			var dots = document.getElementsByClassName("dot");
+			timeOut1 = 2000;
+			var slides1 = document.getElementsByClassName("mySlides1");
+			var dots1 = document.getElementsByClassName("dot1");
 
-			for (i = 0; i < slides.length; i++)
+			for (i = 0; i < slides1.length; i++)
 			{
-				slides[i].style.display = "none";
-				dots[i].className = dots[i].className.replace(" active", "");
+				slides1[i].style.display = "none";
+				dots1[i].className = dots1[i].className.replace(" active", "");
 			}
-			slideIndex++;
+			slideIndex1++;
 
-			if (slideIndex > slides.length) {slideIndex = 1}
-			slides[slideIndex - 1].style.display = "block";
-			dots[slideIndex - 1].className += " active";
+			if (slideIndex1 > slides1.length) {slideIndex1 = 1}
+			slides1[slideIndex1 - 1].style.display = "block";
+			dots1[slideIndex1 - 1].className += " active";
+		}
+
+		var timeOut2 = 100;
+		var slideIndex2 = 0;
+		var autoOn2 = true;
+	
+		autoSlides2();
+		function autoSlides2() 
+		{
+            	timeOut2 = timeOut2 - 20;
+			if (autoOn2 == true && timeOut2 < 0)
+			{
+				showSlides2();
+			}
+			setTimeout(autoSlides2 , 20);
+		}
+
+		function prevSlide2() 
+		{
+			timeOut2 = 2000;
+			var slides2 = document.getElementsByClassName("mySlides2");
+			dots2 = document.getElementsByClassName("dot2");
+
+			for (i = 0; i < slides2.length; i++) 
+			{
+				slides2[i].style.display = "none";
+				dots2[i].className = dots2[i].className.replace(" active", "");
+			}
+			slideIndex2--;
+		
+			if (slideIndex2 > slides2.length) {slideIndex2 = 1}
+			if (slideIndex2 == 0) {slideIndex2 = 4}
+
+			slides2[slideIndex2 - 1].style.display = "block";
+			dots2[slideIndex2 - 1].className += " active";
+		}
+		
+		function showSlides2()
+		{
+			timeOut2 = 2000;
+			var slides2 = document.getElementsByClassName("mySlides2");
+			var dots2 = document.getElementsByClassName("dot2");
+
+			for (i = 0; i < slides2.length; i++)
+			{
+				slides2[i].style.display = "none";
+				dots2[i].className = dots2[i].className.replace(" active", "");
+			}
+			slideIndex2++;
+
+			if (slideIndex2 > slides2.length) {slideIndex2 = 1}
+			slides2[slideIndex2 - 1].style.display = "block";
+			dots2[slideIndex2 - 1].className += " active";
+		}
+
+		var timeOut3 = 100;
+		var slideIndex3 = 0;
+		var autoOn3 = true;
+	
+		autoSlides3();
+		function autoSlides3() 
+		{
+            	timeOut3 = timeOut3 - 20;
+			if (autoOn3 == true && timeOut3 < 0)
+			{
+				showSlides3();
+			}
+			setTimeout(autoSlides3 , 20);
+		}
+
+		function prevSlide3() 
+		{
+			timeOut3 = 2000;
+			var slides3 = document.getElementsByClassName("mySlides3");
+			dots3 = document.getElementsByClassName("dot3");
+
+			for (i = 0; i < slides3.length; i++) 
+			{
+				slides3[i].style.display = "none";
+				dots3[i].className = dots3[i].className.replace(" active", "");
+			}
+			slideIndex3--;
+		
+			if (slideIndex3 > slides3.length) {slideIndex3 = 1}
+			if (slideIndex3 == 0) {slideIndex3 = 4}
+
+			slides3[slideIndex3 - 1].style.display = "block";
+			dots3[slideIndex3 - 1].className += " active";
+		}
+		
+		function showSlides3()
+		{
+			timeOut3 = 2000;
+			var slides3 = document.getElementsByClassName("mySlides3");
+			var dots3 = document.getElementsByClassName("dot3");
+
+			for (i = 0; i < slides3.length; i++)
+			{
+				slides3[i].style.display = "none";
+				dots3[i].className = dots3[i].className.replace(" active", "");
+			}
+			slideIndex3++;
+
+			if (slideIndex3 > slides3.length) {slideIndex3 = 1}
+			slides3[slideIndex3 - 1].style.display = "block";
+			dots3[slideIndex3 - 1].className += " active";
 		}
 	</script>
-</div3>
+</div>
 
-<!--About Us-->
-<div4 class = "leftdiv" id = "AboutUs">
-	<div5 class = "leftdiv"><hr>
-		<p style = "color:yellow;font-size:36px;font-weight:bold;margin-left:30px;">About The Placement Management System</p><hr>
-		<p class = "p2" class = "leftdiv" >
-			The increasing advantages of automated systems now are at the highest position as a result many manual processes are automated. Since automated system is in demand nowadays.<br>Job Portal is the operation, control, and oversight of real estate management that indicates a need to be cared for, and monitored and accountability is given for its useful life and condition. This is much akin to the role of management in any business.<br><br>Job Portal is also the management of personal property, equipment, tooling, and physical capital assets acquired and used to build, repair, and maintain end-item deliverables. Job Portal involves the processes, systems, and manpower required to manage the life cycle of all acquired property as defined above including acquisition,  control, accountability, responsibility, maintenance, utilization, and disposition.<br><br>For example, an owner of a single family may engage the services of a property management company. The company will then advertise the rental property, handle tenant inquiries, screen applicants, select suitable candidates, draw up a lease agreement, conduct a move-in inspection, move the tenant (s) into the property, and collect rental income. The company will then coordinate any maintenance issues, and supply the owner(s) with financial statements and any relevant information regarding the property, etc.<span id="dots">.....</span>
-			<span class = "p2" id = "more"><br><br>This is a web application for the training and placement of students. This system can be accessed throughout the organization with proper login credentials. Students will be able to upload their personal and educational information which will be managed efficiently by the system.<br>It intends to provide fast access to the placement procedures and related activities. It ensures that the student's details are secure. The key feature of this system is that it is a one-time registration-enabled system. This system will aid colleges in practicing full IT deployment. The main objective of this system is to manage the details of the Student, to reduce manual work and time. To offer recruitment to applicants. It handles all the data about CGPA Marks.</span>
-		</p>
-		<button class = "more_less" onclick = "myFunction()" id = "myBtn">Read more</button>
 
-		<script>
-			function myFunction()
-			{
-  				var dots = document.getElementById("dots");
-  				var moreText = document.getElementById("more");
-  				var btnText = document.getElementById("myBtn");
-
-  				if (dots.style.display === "none")
-				{
-    					dots.style.display = "inline";
-    					btnText.innerHTML = "Read more"; 
-    					moreText.style.display = "none";
-  				}
-				else
-				{
-    					dots.style.display = "none";
-    					btnText.innerHTML = "Read less"; 
-    					moreText.style.display = "inline";
-  				}
-			}
-		</script>
-	</div5>
-
-	<div6 class = "rightdiv"><center><hr>
-	<p style = "font-size: 36px;color: yellow;"><b>Advertisement</b></p><hr></center>
-		<img class = "img1" src = "Images/Hiring.jpg"></img><br><br>
-	</div6>
-</div4>
+<!--Space-->
+<div class = "leftdiv space">
+</div>
 
 <!--ShowCase-->
-<div7 class = "leftdiv">
-	<link rel="stylesheet" href="CSS/Showcase.css">
-	<hr>
-	<p style = "font-size:30px;color:white;margin:10px 10px 0 10px;">
-		<b>Some Features</b>
-	</p>
-	<hr>
-	<section id="product" class="section-p1">
-		<div class="containerpro">
-			<div class="pro">
-            		<span style = "font-size:20px;"><b>Manage Jobs</b><hr></span>
-				<img src="Images/ManageJob.jpg" alt="Manage Job"><hr>
-				<div style = "text-align:left;padding-left:5px;">
-					<span><b>Ability to define Special Events days 
-						(days where employees cannot request time-off, are warned or notified 
-						on the calendar)</b>
-					</span>
-				</div>
-				<button onclick = "location.href = '#';">Read More...</button>
+<div class = "leftdiv showcase">
+	<p class = "t1">Project Helps <i class = "fa fa-arrow-right"></i></p>
+	<p class = "t2">To Manage these things</p>
+	<section id = "product" class = "section-p1">
+		<div class = "containerpro">
+			<div class = "pro" onclick = "location.href = '#'">
+				<img src = "Images/ManageJob.jpg" alt = "Manage Job">
+				<span><b>Manage Jobs</b></span>
         		</div>
 
-			<div class="pro">
-            		<span style = "font-size:20px;"><b>Manage Company</b><hr></span>
-				<img src="Images/ManageCompany.jpg" alt="Manage Company"><hr>
-				<div style = "text-align:left;padding-left:5px;">
-					<span><b>Add custom employee categories (i.e., departments , projects).
-						Group your users by offices. Ability to display balance in hours</b>
-					</span>
-				</div>
-				<button onclick = "location.href = '#';">Read More...</button>
+			<div class = "pro" onclick = "location.href = '#'">
+				<img src = "Images/ManageCompany.jpg" alt = "Manage Company">
+				<span><b>Manage Company</b></span>
         		</div>
 
-			<div class="pro">
-            		<span style = "font-size:20px;"><b>Manage Salary</b><hr></span>
-				<img src="Images/ManageSalary.jpg" alt="Manage Salary"><hr>
-				<div style = "text-align:left;padding-left:5px;">
-					<span><b>3 levels of users (Administrators , Managers , Employees) ,
-					each with thier own different permissions. Single Sign-On , LDAP , Active </b>
-					</span>
-				</div>
-				<button onclick = "location.href = '#';">Read More...</button>
+			<div class = "pro" onclick = "location.href = '#'">
+				<img src = "Images/ManageSalary.jpg" alt = "Manage Salary">
+				<span><b>Manage Salary</b></span>
         		</div>
         	</div>
 	</section>
-</div7>
+</div>
 
-<!--Feedback-->
-<div4 class = "leftdiv" id = "Feedback">
-	<div5 class = "leftdiv">
-	<link rel="stylesheet" href="CSS/FeedbackForm.css">
-	<hr><p style = "color:yellow;font-size:28px;text-align:center;"><b>&nbsp;FEEDBACK FORM</b></p><hr>
-		<form style = "margin-left: 10%;margin-top: 40px;"action="#" method="post">
-			<div class = "Feedback">
-				<label for = "uname"><b>Name : </b></label>
-      				<input type ="text" id = "uname" style = "margin-left:50px;" required>
-				<br>
-      				<label for = "company"><b>Company : </b></label>
-      				<input type="text" id = "company" style = "margin-left:16px;" required>
-				<br>
-				<label for = "email"><b>Email : </b></label>
-      				<input type="text" id = "email" style = "margin-left:48px;" required>
-				<br>
-      				<label for = "phone"><b>Phone : </b></label>
-      				<input type="text"  id = "phone" style = "margin-left:44px;" required>
-				<br><br>
-				<label for = "message"><b>Message : </b></label><br>
-      				<textarea rows = "10" cols = "50" id = "message" style = "margin-left:120px;margin-top:-20px;">
-					</textarea>
-				<br>
-      				<button style = "margin-left:120px;margin-top:20px;" type="submit"><b>Submit</b></button>
-      				<button style = "margin-left:10px;margin-top:20px;" type="reset"><b>Reset</b></button>
-			</div>
-  		</form>
-	</div5>
-
-	<div6 class = "rightdiv">
-		<center><hr>
-		<p style = "font-size: 28px;color: yellow;">
-			<b>Advertisement</b>
-		</p>
-		<hr></center>
-		<img class = "img1" src = "Images/thankyou.jpg"></img><br>
-	</div6>
-</div4>
+<!--Space-->
+<div class = "leftdiv space">
+</div>
 
 <!--Footer-->
-<div8 class = "leftdiv">
-	<link rel = "stylesheet" href = "CSS/Footer.css">
-	<footer class="footer-distributed">
-		<div class="footer-left">
+<div class = "leftdiv footer">
+	<footer class = "footer-distributed">
+		<div class = "footer-left">
 			<h3>Company<span>logo</span></h3>
 			<p class="footer-links">
 				<a href=" "> Home </a>
@@ -563,7 +609,7 @@
 		</script>
 		</div>
 	</footer>
-</div8>
+</div>
 
 </body>
 </html>
