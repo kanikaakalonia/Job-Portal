@@ -22,7 +22,7 @@
 
 .dropbtn:hover{color: blue;}
 
-@media screen and (max-width: 300px)
+@media screen and (max-width: 600px)
 {
-	.dropbtn{font-size:11px;}
+	.dropbtn{font-size:9px;padding:4px 7px;}
 }
