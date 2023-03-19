@@ -94,3 +94,30 @@
 
 /* The contact form */
 .footer-distributed form{display: inline-block;}
+
+/*Right side upper arrow*/
+#upper
+{
+	background-color: blue;
+	width: 50px;
+	height: 50px;
+  	position: fixed;
+	color: white;
+  	bottom: 8px;
+  	display: block;
+	margin-top:5px;
+	margin-bottom: auto;
+  	transition: bottom 0.3s;
+	text-align: center;
+	border-radius:4px;
+	opacity:0.6;
+}
+
+#upper a 
+{
+  	display: block;
+  	color: white;
+  	text-decoration: none;
+}
+
+#upper:hover {opacity:1;}
