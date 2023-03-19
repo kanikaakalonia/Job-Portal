@@ -52,6 +52,7 @@
 	line-height: 1.8;
 	text-decoration: none;
 	color:  inherit;
+	margin-right:7px;
 }
 
 .footer-distributed .footer-company-name
@@ -68,8 +69,8 @@
 .footer-distributed .footer-icons a
 {
 	display: inline-block;
-	width: 35px;
-	height: 35px;
+	width: 30px;
+	height: 30px;
 	cursor: pointer;
 	background-color:  #33383b;
 	border-radius: 2px;
@@ -79,6 +80,13 @@
 	line-height: 35px;
 	margin-right: 3px;
 	margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons i
+{
+	text-align:center;
+	font-size:large;
+	margin-top:10%;
 }
 
 /* Footer Right */
@@ -110,7 +118,7 @@
   	transition: bottom 0.3s;
 	text-align: center;
 	border-radius:4px;
-	opacity:0.6;
+	opacity:0.7;
 }
 
 #upper a 
