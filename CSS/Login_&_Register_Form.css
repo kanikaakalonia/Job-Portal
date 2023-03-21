@@ -3,7 +3,7 @@
 input[type=text], input[type=password]
 {
 	width: 100%;
-	margin: 0.3% 0;
+	margin: 0.5% 0;
 	padding: 10px 20px;
 	display: inline-block;
 	border: 1px solid #ccc;
@@ -15,7 +15,7 @@ input[type=text], input[type=password]
 .name input[type=text]
 {
 	width: 46%;
-	margin: 0.2% 0;
+	margin: 0.3% 0;
 	padding: 10px 20px;
 	display: inline-block;
 	border: 1px solid #ccc;
@@ -33,7 +33,7 @@ input[type=text]:focus, input[type=password]:focus{background-color:white;}
 	background-color: blue;
 	color: white;
 	padding: 10px 20px;
-	margin: 0.5% 0;
+	margin: 1.1% 0;
 	border: none;
 	cursor: pointer;
 	width: 100%;
@@ -83,8 +83,8 @@ input[type=text]:focus, input[type=password]:focus{background-color:white;}
   	margin-bottom: 1.7%;
 }
 
-.containerL {padding: 14px;display:none;}
-.containerR {padding: 14px;}
+.containerL {padding: 20px;display:none;}
+.containerR {padding: 20px;}
 
 
 label{font-size:18px;}
@@ -99,7 +99,7 @@ label{font-size:18px;}
 p .psw
 {
 	float: right;
-	padding-top: 14px;
+	padding-top: 17px;
 }
 
 /* The Modal (background) */
