@@ -13,6 +13,7 @@
 	<link rel = "stylesheet" href = "CSS/Footer.css">
 	<link rel = "stylesheet" href = "CSS/Showcase.css">
 	<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel = "icon" type = "image/x-icon" href = "Images/favicon.ico">
 </head>
 <body>
 
@@ -285,7 +286,7 @@
 				<a href = " "> Blog </a>
 				<a href = " "> Pricing </a>
 				<a href = " "> About </a>
-				<a href = " "> Contact </a>
+				<a href = "mailto:kushal4055@rla.du.ac.in" target = "_blank"> Contact </a>
 			</p>
 			<p class = "footer-company-name">RLA © 2023</p>
 			<div class = "footer-icons">
@@ -298,23 +299,8 @@
 
 		<!--Home button-->
 		<div class = "rightdiv">
-		<a href = "#Home" id = "upper"><i class = "fa fa-arrow-up" style = "font-size:xx-large;font-weight:bold;text-align:center;margin-top:14%;"></i></a>
-		<script>
-			var prevScrollpos = window.pageYOffset;
-			window.onscroll = function ()
-			{
-				var currentScrollPos = window.pageYOffset;
-  				if (prevScrollpos > currentScrollPos)
-				{
-					document.getElementById("upper").style.bottom = "8px";
-				}
-				else
-				{
-					document.getElementById("upper").style.bottom = "-100px";
-  				}
-  				prevScrollpos = currentScrollPos;
-			}
-		</script>
+			<a href = "#Home" id = "upper"><i class = "fa fa-arrow-up" style = "font-size:xx-large;font-weight:bold;text-align:center;margin-top:14%;"></i></a>
+			<script type = "text/javascript" src = "Javascript/UpperButton.js"></script>
 		</div>
 	</footer>
 </div>
