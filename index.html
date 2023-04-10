@@ -1,7 +1,7 @@
 <html>
 <head>
 	<meta name = "viewport" content = "width = device-width, initial-scale = 1">
-	<meta http-equiv = "Content-Type" content = "text/html; charset = utf-8">
+	<meta http-equiv = "Content-Type" content = "text/html;charset = utf-8">
 	<meta name = "language" content = "English">
 
 	<title>Project</title>
@@ -12,6 +12,7 @@
 	<link rel = "stylesheet" href = "CSS/Slideshow.css">
 	<link rel = "stylesheet" href = "CSS/Footer.css">
 	<link rel = "stylesheet" href = "CSS/Showcase.css">
+	<link rel = "stylesheet" href = "CSS/AboutUs.css">
 	<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel = "icon" type = "image/x-icon" href = "Images/favicon.ico">
 </head>
@@ -19,18 +20,18 @@
 
 <!--Header-->
 <div class = "leftdiv header" id = "Home">
-	<span class = "leftdiv dropbtn" onclick = "location.href = 'index.html'" style = "margin-left: 7%;border-right:none;font-weight:bold;">
-		<span style = "color:blue;">PRO</span><span style = "color:black;">JECT</span>
+	<span class = "leftdiv" onclick = "location.href = 'index.html'" style = "margin-left:7%;margin-top:1.1%;font-size:24px;font-weight:bold;">
+		<span class = "neonText">PROJECT</span>
 	</span>
 
 	<!--Buttons-->
 	<div class = "rightdiv">
 		<button class = "dropbtn" onclick = "location.href = 'HTML/AllCompany.html'">
-			<i class="fa fa-building"></i> All Company
+			<i class = "fa fa-building"></i> Companies
 		</button>
 
 		<button class = "dropbtn" onclick = "location.href = 'HTML/AllJobs.html'">
-			<i class="fa fa-briefcase"></i> All Jobs
+			<i class = "fa fa-briefcase"></i> Jobs
 		</button>
 
 		<div class = "dropdown">
@@ -41,7 +42,7 @@
 			<div id = "id00" class = "modal">
 				<form class = "modal-content animate" action = "#" method = "post">
 					<div class = "heading">
-						<span onclick = "document.getElementById('id00').style.display='none'" class = "close" title="Close">&times;</span>
+						<span onclick = "document.getElementById('id00').style.display='none'" class = "close" title ="Close">&times;</span>
 					</div>
 		
 					<div class = "containerR">
@@ -79,7 +80,7 @@
 
 		<!--Login Form-->
 		<div class = "dropdown">
-			<button class = "dropbtn" style = "border-right:none;" onclick = "document.getElementById('id01').style.display = 'block'; document.getElementById('lb1').style.display = 'block';">
+			<button class = "dropbtn" onclick = "document.getElementById('id01').style.display = 'block'; document.getElementById('lb1').style.display = 'block';">
 				<i class = "fa fa-sign-in"></i> Login</i>
 			</button>	
 
@@ -149,21 +150,85 @@
 	</div>
 </div>
 
-<!--Search bar-->
-<div class = "leftdiv searchbar">
-	<form>
-		<center>
-		<input type = "text" placeholder = "What are you looking for?">
-		<span onclick = "location.href = '#'"><i class = "fa fa-search" style = "font-size:x-large;font-weight:bold;text-align:center;color:white;"></i></span>
-		</center>
-	</form>
+<!--Background-->
+<div class = "background">
+	<div class = "positionbtn" id = "move">
+		<button class = "showbtn neonText1" onclick = "location.href = '#AboutUs'">About Us</button>
+		<button class = "showbtn neonText1" onclick = "location.href = '#Events'">Events</button>
+		<button class = "showbtn neonText1" onclick = "location.href = '#Drives'">Drives</button>
+		<button class = "showbtn neonText1" onclick = "openSearch();" id = "searchbtn"><i class = "fa fa-search" style = "font-size:x-large;"></i></button>
+		<form id = "searchbar">
+			<input type = "text" placeholder = "What are you looking for?">
+			<a class = "showbtn" href = "javascript:void(0)" onclick = "closeSearch()" style = "margin-left:-50px;text-decoration:none;"><i class = "fa fa-search" style = "font-size:x-large;color:black;"></i></a>
+		</form>
+	</div>
+	<script>
+		function openSearch() 
+		{
+  			document.getElementById("searchbtn").style.display = "none";
+			document.getElementById("searchbar").style.display = "block";
+			document.getElementById("move").style.left = "40%";
+		}
+		
+		function closeSearch() 
+		{
+  			document.getElementById("searchbtn").style.display = "block";
+			document.getElementById("searchbar").style.display = "none";
+			document.getElementById("move").style.left = "60%";
+			document.getElementById("searchbtn").style.marginLeft = "450px";
+			document.getElementById("searchbtn").style.marginTop = "-8vh";
+		}
+	</script>
+</div>
+
+<!--About Us-->
+<div class = "leftdiv About-Us" id = "AboutUs">
+	<div class = "leftdiv"><hr>
+		<p style = "color:black;font-size:36px;text-align:center;font-weight:bold;">The Project</p><hr>
+		<p class = "About-para">
+			The increasing advantages of automated systems now are at the highest position as a result, many manual processes are automated. Since the automated system is in demand nowadays.Job Portal is the operation, control, and oversight of real estate management that indicates a need to be cared for, and monitored. Accountability is given for its useful life and condition. This is much akin to the role of management in any business.Job Portal is also the management of personal property, equipment, tooling, and physical capital assets acquired and used to build, repair, and maintain end-item deliverables. Job Portal involves the processes, systems, and manpower required to manage the life cycle of all acquired property as defined above including acquisition, control, accountability, responsibility, maintenance, utilization, and disposition.For example, an owner of a single-family may engage the services of a property management company. The company will then advertise the rental property, handle tenant inquiries, screen applicants, select suitable candidates, draw up a lease agreement, conduct a move-in inspection, move the tenant (s) into the property, and collect rental income. The company will then coordinate any maintenance issues, and supply the owner(s) with financial statements and any relevant information regarding the property, etc.This is a web application for the training and placement of students. This system can be accessed throughout the organization with proper login credentials. Students will be able to upload their personal and educational information, which the system will manage efficiently. The main objective of this system is to manage the details of the Student, to reduce manual work and time. To offer recruitment to applicants.</span>
+		</p>
+	</div>
+
+	<p style = "font-size:36px;text-align:center;"><b>Meet The Team</b><p>
+
+	<div id = "About" class = "leftdiv">
+		<div class = "leftdiv">
+			<div class = "container">
+				<img src = "Images/avatar.jpg" alt = "Photo">
+				<span><b>Name</b><br>The one who loves to explore. You’ll never see him sitting idle; either he will be coding or exploring places. And yeah, never ask him out on a lunch date because you’ll end up only with a glass of juice- his staple food.</span>
+        		</div>
+
+			<div class = "container">
+				<img src = "Images/avatar.jpg" alt = "Photo">
+				<span><b>Name</b><br>The one who loves to explore. You’ll never see him sitting idle; either he will be coding or exploring places. And yeah, never ask him out on a lunch date because you’ll end up only with a glass of juice- his staple food.</span>
+        		</div>
+
+			<div class = "container">
+				<img src = "Images/avatar.jpg" alt = "Photo">
+				<span><b>Name</b><br>The one who loves to explore. You’ll never see him sitting idle; either he will be coding or exploring places. And yeah, never ask him out on a lunch date because you’ll end up only with a glass of juice- his staple food.</span>
+        		</div>
+
+			<div class = "container">
+				<img src = "Images/avatar.jpg" alt = "Photo">
+				<span><b>Name</b><br>The one who loves to explore. You’ll never see him sitting idle; either he will be coding or exploring places. And yeah, never ask him out on a lunch date because you’ll end up only with a glass of juice- his staple food.</span>
+        		</div>
+        	</div>
+	</div>
+</div>
+
+<div class = "space leftdiv">
+</div>
+
+<div class = "space leftdiv" style = "background-color:#132020;">
 </div>
 
 <!--Slideshow-->
-<div class = "leftdiv slideshow">
+<div class = "leftdiv slideshow" id = "Events">
+	<p class = "s1">Events <i class = "fa fa-arrow-right"></i></p>
 	<div class = "leftdiv slideshow-container1">
 		<div class = "mySlides1 animationR">
-			<img src = "Images/Placement4.jpg" onclick = "prevSlide1();prevSlide2();prevSlide3();">
+			<img src = "Images/Placement5.jpg" onclick = "prevSlide1();prevSlide2();prevSlide3();">
 		</div>
 
 		<div class = "mySlides1 animationR">
@@ -178,32 +243,42 @@
 			<img src = "Images/Placement3.jpg" onclick = "prevSlide1();prevSlide2();prevSlide3();">
 		</div>
 
+		<div class = "mySlides1 animationR">
+			<img src = "Images/Placement4.jpg" onclick = "prevSlide1();prevSlide2();prevSlide3();">
+		</div>
+
 		<div style = "text-align:center;margin-top:-5vh;z-index:2;">
 			<span class = "dot1"></span> 		
 			<span class = "dot1"></span> 
 			<span class = "dot1"></span> 
+			<span class = "dot1"></span>
 			<span class = "dot1"></span> 
 		</div>
 	</div>
 	<div class = "leftdiv slideshow-container2">
 		<div class = "mySlides2 animationR">
-			<div class = "numbertext">1/4</div>
+			<div class = "numbertext">1/5</div>
 			<img src = "Images/Placement1.jpg">
 		</div>
 
 		<div class = "mySlides2 animationR">
-			<div class = "numbertext">2/4</div>
+			<div class = "numbertext">2/5</div>
 			<img src = "Images/Placement2.jpg">
 		</div>
 
 		<div class = "mySlides2 animationR">
-			<div class = "numbertext">3/4</div>
+			<div class = "numbertext">3/5</div>
 			<img src = "Images/Placement3.jpg">
 		</div>
 		
 		<div class = "mySlides2 animationR">
-			<div class = "numbertext">4/4</div>
+			<div class = "numbertext">4/5</div>
 			<img src = "Images/Placement4.jpg">
+		</div>
+	
+		<div class = "mySlides2 animationR">
+			<div class = "numbertext">5/5</div>
+			<img src = "Images/Placement5.jpg">
 		</div>
 
 		<div style = "text-align:center;margin-top:5px;z-index:2;">
@@ -211,6 +286,7 @@
 			<span class = "dot2"></span> 
 			<span class = "dot2"></span> 
 			<span class = "dot2"></span> 
+			<span class = "dot2"></span>
 		</div>
 
 		<a class = "prev" onclick = "prevSlide1();prevSlide2();prevSlide3();">&#10094;</a>
@@ -230,6 +306,10 @@
 		</div>
 		
 		<div class = "mySlides3 animationR">
+			<img src = "Images/Placement5.jpg" onclick = "showSlides1();showSlides2();showSlides3();">
+		</div>
+
+		<div class = "mySlides3 animationR">
 			<img src = "Images/Placement1.jpg" onclick = "showSlides1();showSlides2();showSlides3();">
 		</div>
 
@@ -238,20 +318,21 @@
 			<span class = "dot3"></span> 
 			<span class = "dot3"></span> 
 			<span class = "dot3"></span> 
+			<span class = "dot3"></span> 
 		</div>
 	</div>
 	<script type = "text/javascript" src = "Javascript/Slideshow.js"></script>
 </div>
 
-
-<!--Space-->
-<div class = "leftdiv space">
+<div class = "leftdiv space" style = "background-color:#132020;">
 </div>
 
 <!--ShowCase-->
-<div class = "leftdiv showcase">
-	<p class = "t1">Project Helps <i class = "fa fa-arrow-right"></i></p>
-	<p class = "t2">To Manage these things</p>
+<div class = "leftdiv showcase" id = "Drives">
+	<!--Space-->
+	<div class = "leftdiv space">
+	</div>
+	<p class = "t1">Drives <i class = "fa fa-arrow-right"></i></p>
 	<section id = "product" class = "section-p1">
 		<div class = "containerpro">
 			<div class = "pro" onclick = "location.href = '#'">
@@ -272,12 +353,11 @@
 	</section>
 </div>
 
-<!--Space-->
 <div class = "leftdiv space">
 </div>
 
 <!--Footer-->
-<div class = "leftdiv footer">
+<div class = "leftdiv footer" id = "footer">
 	<footer class = "footer-distributed">
 		<div class = "footer-left">
 			<h3>Pro<span>ject</span></h3>
