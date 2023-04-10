@@ -1,0 +1,116 @@
+.leftdiv{float: left;}
+.rightdiv{float: right;}
+body {font-family: Arial, Helvetica, sans-serif;margin: 0;}
+html {scroll-behavior: smooth;}
+
+.neonText 
+{
+  	color: #fff;
+  	text-shadow:0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073, 0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+}
+
+.header
+{
+	width: 100%;
+	background-color: #ffffff00;
+}
+
+.background
+{
+	background: url(../Images/background.jpg);
+    	background-size: cover;
+    	background-repeat: no-repeat;
+    	/*background-attachment: fixed;*/
+	height:100%;
+	width:100%;
+	z-index:1;
+}
+
+#searchbar
+{
+	display:none;
+	position: relative;
+	margin-left:450px;
+	margin-top:-8vh;
+}
+
+#searchbar input[type=text]
+{
+	width:350px;
+	border: 2px solid black;
+	border-radius:16px;
+	background-color:grey;
+	color:black;
+	cursor: pointer;
+}
+
+#searchbar input[type=text]:focus{border:1px solid black;}
+#searchbar input[type=text]::placeholder{color:white;}
+
+/*About Us*/
+.About-Us
+{
+	width:100%;
+	background-color:white;
+	border:none;
+	color:black;
+}
+
+/*Slideshow*/
+.slideshow
+{
+	background-color:#132020;   
+	width: 100%;
+	border: none;
+	overflow:hidden;
+}
+
+.slideshow img
+{
+	width:100%;
+	height:94%;
+	border-radius:6px;
+	user-select:none;
+	border: 1px solid white;
+}
+
+/*space*/
+.space
+{
+	width:100%;
+	height: 6%;
+	background-color:white;
+}
+
+.s1
+{
+	margin-left:7%;
+	font-size:32px;
+	color:white;
+	margin-bottom:3%;
+}
+
+/*Showcase*/
+.showcase
+{
+	color: black;
+	background-color:white;  
+	width: 100%;
+	border-top:1px solid white ;
+}
+
+/*Footer*/
+.footer
+{
+	color: blue;
+	background-color: #132020;
+	width: 100%;
+	border-top:2px solid grey;
+}
+
+/*All Company & Jobs*/
+.All_C&J
+{
+	width:100%;
+}
+
