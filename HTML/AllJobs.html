@@ -7,7 +7,7 @@
 	<title>Project</title>
 
 	<link rel = "stylesheet" href = "../CSS/style.css">
-	<link rel = "stylesheet" href = "../CSS/Button.css">
+	<link rel = "stylesheet" href = "../CSS/All_C&J_Buttons.css">
 	<link rel = "stylesheet" href = "../CSS/Login_&_Register_Form.css">
 	<link rel = "stylesheet" href = "../CSS/Footer.css">
 	<link rel = "stylesheet" href = "../CSS/All_Jobs.css">
@@ -16,137 +16,168 @@
 </head>
 <body>
 
-<!--Header-->
-<div class = "leftdiv header" id = "Home">
-	<span class = "leftdiv" onclick = "location.href = '../index.html'" style = "margin-left:7%;margin-top:1.1%;font-size:24px;font-weight:bold;">
-		<span>PROJECT</span>
-	</span>
+	<script type="text/javascript" src="Javascript/sweetAlert.js"></script>
+	<!--Header-->
+    <div class="leftdiv header" id="Home" style = "background-color: black;">
+        <span class="leftdiv" onclick="location.href = '../index.html'"
+            style="margin-left:7%;margin-top:1.1%;font-size:24px;font-weight:bold;color:white;">PROJECT
+        </span>
 
-	<!--Buttons-->
-	<div class = "rightdiv">
-		<button class = "dropbtn" onclick = "location.href = 'AllCompany.html'">
-			<i class = "fa fa-building"></i> Companies
-		</button>
+        <!--Buttons-->
+        <div class="rightdiv">
+            <button class="dropbtn" onclick="location.href = 'AllCompany.html'">
+                <i class="fa fa-building"></i> Companies
+            </button>
 
-		<button class = "dropbtn" onclick = "location.href = 'AllJobs.html'">
-			<i class = "fa fa-briefcase"></i> Jobs
-		</button>
+            <button class="dropbtn" onclick="location.href = 'AllJobs.html'">
+                <i class="fa fa-briefcase"></i> Jobs
+            </button>
 
-		<div class = "dropdown">
-			<button class = "dropbtn" onclick = "document.getElementById('id00').style.display = 'block'">
-				<i class = "fa fa-user-plus"></i> Register
-			</button>
+            <div class="dropdown">
+                <button class="dropbtn" onclick="document.getElementById('id00').style.display = 'block'">
+                    <i class="fa fa-user-plus"></i> Register
+                </button>
 
-			<div id = "id00" class = "modal">
-				<form class = "modal-content animate" action = "#" method = "post">
-					<div class = "heading">
-						<span onclick = "document.getElementById('id00').style.display='none'" class = "close" title ="Close">&times;</span>
-					</div>
-		
-					<div class = "containerR">
-						<label for = "email"><b>Email : </b></label><br>
-      					<input type = "text" placeholder = "john@example.com" name = "email" id = "myInput" required>
+                <div id="id00" class="modal">
+                    <form class="modal-content animate" action="" method="post" id = "formR">
+                        <div class="heading">
+                            <p style = "margin-top:4%;"><span style = "color:red;">Registration</span>Form</p>
+                            <span onclick="document.getElementById('id00').style.display='none'" class="close"
+                                title="Close">&times;</span>
+                        </div>
 
-						<br><p id = "text">WARNING! Caps lock is ON.</p><br>
+                        <div class="containerR">
+                            <div class = "form-control">
+                                <input type="text" placeholder="Username" name="username" id="usernameR">
+                                <i class = "fa fa-check-circle"></i>
+                                <i class = "fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
 
-      					<label for = "psw"><b>Password : </b></label><br>
-     		 				<input type = "password" placeholder = "Must be atleast six characters" name = "psw" id = "myshow" required>
-						<input type = "checkbox" onclick = "myshowpsw()" style = "font-size:11p;">Show Password
+                            <div class = "form-control">
+                                <input type="email" placeholder="Email-ID" name="email" id="emailR">
+                                <i class = "fa fa-check-circle"></i>
+                                <i class = "fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
 
-      	  				<br><br>
-						
-						<div class = "name"> 
-      						<label for ="firstname"><b>First name: </b></label>
-							<label for ="lastname" style = "margin-left:33%;"><b>Last name: </b></label><br>
-			
-     		 					<input type = "text" placeholder = "John" name = "firstname" required>
-     		 					<input type = "text" placeholder = "dae" name = "lastname" class = "rightdiv" required>
-						</div>
+                            <div class = "form-control">
+                                <input type="password" placeholder="Password" name="password" id="passwordR">
+                                <i class = "fa fa-eye" id = "show-passwordR"></i>
+                                <i class = "fa fa-check-circle"></i>
+                                <i class = "fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
 
-						<hr>
-						<p>By registering, you agree to our <a href = "#">Terms & Conditions</a>.</p>
-     						<button type = "submit" class = "lrbtn">Register</button>
+                            <div class = "form-control">
+                                <input type="password" placeholder="Confirm Password" name="cpassword" id="cpasswordR">
+                                <i class = "fa fa-eye" id = "cshow-passwordR"></i>
+                                <i class = "fa fa-check-circle"></i>
+                                <i class = "fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
 
-						<div class = "containerR signin">
-    							<p style = "color: black;">Already have an account? <a href = "#" onclick = "document.getElementById('id01').style.display = 'block'; 									document.getElementById('id00').style.display = 'none'">Sign in</a></p>
- 						</div>
-    					</div>
-  				</form>
-			</div>
-			<script type = "text/javascript" src = "Javascript/Register.js"></script>
-		</div>
+                            <hr>
+                            <p>By registering, you agree to our <a href="#">Terms & Conditions</a>.</p>
+                            <button type="submit" value = "send" class="lrbtn" id = "register">Register</button>
 
-		<!--Login Form-->
-		<div class = "dropdown">
-			<button class = "dropbtn" onclick = "document.getElementById('id01').style.display = 'block'; document.getElementById('lb1').style.display = 'block';">
-				<i class = "fa fa-sign-in"></i> Login</i>
-			</button>	
+                            <center><p style="color: black;">Already have an account? <a href="#"
+                                onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id00').style.display = 'none'">Login
+                                </a></p></center>
+                        </div>
+                    </form>
+                </div>
+                <script type="text/javascript" src="Javascript/Register.js"></script>
+            </div>
 
-			<div id = "id01" class = "modal">
-				<form class = "modal-content animate" action = "#" method = "post">
-					<div class = "heading">
-						<span onclick = "document.getElementById('id01').style.display = 'none'" class = "close" title = "Close">&times;</span>	
-					</div>
+            <!--Login Form-->
+            <div class="dropdown">
+                <button class="dropbtn"
+                    onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('lb1').style.display = 'block';">
+                    <i class="fa fa-sign-in"></i> Login</i>
+                </button>
 
-					<div class = "btn-group">
-						<button onclick = "document.getElementById('id001').style.display = 'block'; document.getElementById('id002').style.display = 'none'; mylb1()">
-						<p id = "lb1" class = "p1l">User</p></button>
-						<button onclick = "document.getElementById('id002').style.display = 'block'; document.getElementById('id001').style.display = 'none'; mylb2()">
-						<p id = "lb2" class = "p2l">Admin</p></button>
-					</div>
-					
-					<!--User-->
-					<div class = "containerR" id = "id001">
-						<label for = "email"><b>Email : </b></label><br>
-      					<input type = "text" placeholder = "john@example.com" name = "email" id = "myInput1" required>
+                <div id="id01" class="modal">
+                    <form class="modal-content animate" action="" method="post" id = "formL">
+                        <div class="heading">
+                            <p style = "margin-top:4%;"><span style = "color:red;">Login</span>Form</p>
+                            <span onclick="document.getElementById('id01').style.display = 'none'" class="close"
+                                title="Close">&times;</span>
+                        </div>
 
-						<br><p id = "text1">WARNING! Caps lock is ON.</p><br>
+                        <!-- <div class="btn-group">
+                            <button
+                                onclick="document.getElementById('id001').style.display = 'block'; document.getElementById('id002').style.display = 'none'; mylb1()">
+                                <p id="lb1" class="p1l">User</p>
+                            </button>
+                            <button
+                                onclick="document.getElementById('id002').style.display = 'block'; document.getElementById('id001').style.display = 'none'; mylb2()">
+                                <p id="lb2" class="p2l">Admin</p>
+                            </button>
+                        </div> -->
 
-      					<label for = "psw"><b>Password : </b></label><br>
-     		 				<input type = "password" placeholder = "Must be atleast six characters" name = "psw" id = "myshow1" required>
-      	  				<input type = "checkbox" onclick = "myshowpsw1()" style = "font-size:13px;">Show Password
+                        <!--User-->
+                        <div class="containerR"><!--id="id001"> -->
+                            <div class = "form-control">
+                                <input type="email" placeholder="Email-ID" name="email" id="emailL">
+                                <i class = "fa fa-check-circle"></i>
+                                <i class = "fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
 
-						<p class = "psw" style = "float:right;">Forgot <a href = "#" style = "color:blue"> Password?</a></p>
-     						<button class = "lrbtn" type = "submit">Login</button>
+                            <div class = "form-control">
+                                <input type="password" placeholder="Password" name="password" id="passwordL">
+                                <i class = "fa fa-eye" id = "show-passwordL"></i>
+                                <i class = "fa fa-check-circle"></i>
+                                <i class = "fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
 
-     						<label>
-     							<input type = "checkbox" checked = "checked" name = "remember"> Remember me
-     						</label>
+                            <hr>
+                            <button type="submit" value = "send" class ="lrbtn">Login</button>
 
-						<div class = "containerR signup">
-    							<p style = "color: black;">New to Project? <a href = "#" onclick = "document.getElementById('id00').style.display = 'block'; 											document.getElementById('id01').style.display = 'none'">Register</a></p>
- 						</div>
-    					</div>
+                            <p><a href = "">Forgot Password?</a></p>
+                            <span style="float:right;margin-top:-8%;">Create an Account? <a href="#"
+                                onclick="document.getElementById('id00').style.display = 'block'; document.getElementById('id01').style.display = 'none'">
+                                Register</a></span>
+                            
+                        </div>
 
-					<!--Admin-->
-					<div class = "containerL" id = "id002">
-						<label for = "email"><b>Email : </b></label><br>
-      					<input type = "text" placeholder = "john@example.com" name = "email" id = "myInput2" required>
+                        <!-- Admin
+                        <div class="containerL" id="id002">
+                            <label for="email"><b>Email : </b></label><br>
+                            <input type="text" placeholder="john@example.com" name="email" id="myInput2" required>
 
-						<br><p id = "text2">WARNING! Caps lock is ON.</p><br>
+                            <br>
+                            <p id="text2">WARNING! Caps lock is ON.</p><br>
 
-      					<label for = "psw"><b>Password : </b></label><br>
-     		 				<input type = "password" placeholder = "Must be atleast six characters" name = "psw" id = "myshow2" required>
-      	  				<input type = "checkbox" onclick = "myshowpsw2()" style = "font-size:13px;">Show Password
+                            <label for="psw"><b>Password : </b></label><br>
+                            <input type="password" placeholder="Must be atleast six characters" name="psw" id="myshow2"
+                                required>
+                            <input type="checkbox" onclick="myshowpsw2()" style="font-size:13px;">Show Password
 
-						<br><p class = "psw" style = "float:right;">Forgot <a href = "#" style = "color:blue"> Password?</a></p><br><br>
+                            <br>
+                            <p class="psw" style="float:right;">Forgot <a href="#" style="color:blue"> Password?</a></p>
+                            <br><br>
 
-						<label for = "securtiy"><b>Securtiy Key : </b></label><br>
-      					<input type = "password" placeholder = "Security key" name = "security" id = "mykey" required>
-						<input type = "checkbox" onclick = "myshowkey()" style = "font-size:13px;">Show key
+                            <label for="securtiy"><b>Securtiy Key : </b></label><br>
+                            <input type="password" placeholder="Security key" name="security" id="mykey" required>
+                            <input type="checkbox" onclick="myshowkey()" style="font-size:13px;">Show key
 
-     						<button class = "lrbtn" type = "submit">Login</button>
+                            <button class="lrbtn" type="submit">Login</button>
 
-						<div class = "containerR signup">
-    							<p style = "color: black;">New to Project? <a href = "#" onclick = "document.getElementById('id00').style.display = 'block'; 											document.getElementById('id01').style.display = 'none'">Register</a></p>
- 						</div>
-    					</div>
-  				</form>
-			</div>
-			<script type = "text/javascript" src = "Javascript/Login.js"></script>
-		</div>	
-	</div>
-</div>
+                            <div class="containerR signup">
+                                <p style="color: black;">New to Project? <a href="#"
+                                        onclick="document.getElementById('id00').style.display = 'block';                                           document.getElementById('id01').style.display = 'none'">Register</a>
+                                </p>
+                            </div> -->
+                        </div>
+                    </form>
+                </div>
+                <script type="text/javascript" src="Javascript/Login.js"></script>
+            </div>
+        </div>
+    </div>
 
 <div class = "leftdiv All_C&J">
 <table class = "demotbl">
