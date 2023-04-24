@@ -1,5 +1,3 @@
-
-
 // Get the modal
 var modal = document.getElementById('id00');
 
@@ -107,24 +105,26 @@ cshowPassword.addEventListener("click", function () {
 	cpasswordField.setAttribute("type", type);
 })
 
-// const submit_button = document.querySelector('#register');
-// submit_button.onclick = (e) => {
-// 	e.preventDefault();
-// 	//All input data recieved this variables
-// 	const usernameS = document.getElementById('usernameR').value;
-// 	const emailS = document.getElementById('emailR').value;
-// 	const passwordS = document.getElementById('passwordR').value;
-// 	const cpasswordS = document.getElementById('cpasswordR').value;
+const submit_button = document.querySelector('#register');
+submit_button.onclick = (e) => {
+	e.preventDefault();
+	//All input data recieved this variables
+	const usernameS = document.getElementById('usernameR').value;
+	const emailS = document.getElementById('emailR').value;
+	const passwordS = document.getElementById('passwordR').value;
+	const cpasswordS = document.getElementById('cpasswordR').value;
 
-	// if (VaildForm()) {
-	// 	//now store this data in your web browser store
-	// 	localStorage.setItem('usernameR', usernameS);
-	// 	localStorage.setItem('emailR', emailS);
-	// 	localStorage.setItem('passwordR', passwordS);
-	// 	localStorage.setItem('cpasswordR', cpasswordS);
-	// }
+	if (VaildForm()) {
+		//now store this data in your web browser store
+		localStorage.setItem('usernameR', usernameS);
+		localStorage.setItem('emailR', emailS);
+		localStorage.setItem('passwordR', passwordS);
+		localStorage.setItem('cpasswordR', cpasswordS);
+	}
 
-	//now store this data in your web browser store
+	checkInputs();
+
+	// now store this data in your web browser store
 	// localStorage.setItem('usernameR', usernameS);
 	// localStorage.setItem('emailR', emailS);
 	// localStorage.setItem('passwordR', passwordS);
@@ -143,6 +143,25 @@ cshowPassword.addEventListener("click", function () {
 	// 		// return true;
 	// 	}
 	// }
+function VaildForm(){
+	if (usernameS == '') {
+		swal("Oops..!", "Username cannot be blank", "error");
+	}
+	else if (emailS == '') {
+		swal("Oops..!","Email cannot be blank", "error");
+	} else if (!isEmail(emailS)) {
+		swal("Oops..!","Please enter valid Email ID!" ,"error");
+	} else if (passwordS == '') {
+		swal("Oops..!","Password cannot be blank", "error");
+	} else if (cpasswordS == '') {
+		swal("Oops.!","Please confirm your password", "error");
+	} else if (cpasswordS !== passwordS) {
+		swal("Oops..!","Password does not match.", "error");
+	} else {
+		swal("Good Job!","Registration Successful.", "success");
+		return true;
+	}
+}
 
 	// function VaildForm() {
 	// 	if (usernameS == '') {
@@ -163,17 +182,17 @@ cshowPassword.addEventListener("click", function () {
 	// 		return true;
 	// 	}
 
-	// 	if (username == '' && email == '' && password == '' && cpassword == '') {
-	// 		swal("Oops..!", "Username cannot be blank", "error");
-	// 	}
-	// 	else {
-	// 		if (cpasswordS !== passwordS) {
-	// 			swal("Oops..!", "Password does not match.", "error");
-	// 		}
-	// 		else {
-	// 			swal("Good job!", "Registration Successful.", "success");
-	// 			return true;
-	// 		}
-	// 	}
-	// }
-//}
+		// if (usernameS == '' && emailS == '' && passwordS == '' && cpasswordS == '') {
+		// 	swal("Oops..!", "Username cannot be blank", "error");
+		// }
+		// else {
+		// 	if (cpasswordS !== passwordS) {
+		// 		swal("Oops..!", "Password does not match.", "error");
+		// 	}
+		// 	else {
+		// 		swal("Good job!", "Registration Successful.", "success");
+		// 		return true;
+		// 	}
+		// }
+	//}
+}
