@@ -49,6 +49,7 @@ html {
 	background-color: grey;
 	color: black;
 	cursor: pointer;
+	padding: 1vh;
 }
 
 #searchbar input[type=text]:focus {
