@@ -43,51 +43,53 @@
                 </button>
 
                 <div id="id00" class="modal">
-                    <form class="modal-content animate" action="" method="post" id = "formR">
+                    <form class="modal-content animate" action="" method="post" id="formR">
                         <div class="heading">
-                            <p style = "margin-top:4%;"><span style = "color:red;">Registration</span>Form</p>
+                            <p style="margin-top:4%;"><span style="color:red;">Registration</span>Form</p>
                             <span onclick="document.getElementById('id00').style.display='none'" class="close"
                                 title="Close">&times;</span>
                         </div>
 
                         <div class="containerR">
-                            <div class = "form-control">
+                            <div class="form-control">
                                 <input type="text" placeholder="Username" name="username" id="usernameR">
-                                <i class = "fa fa-check-circle"></i>
-                                <i class = "fa fa-exclamation-circle"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
                                 <small>Error message</small>
                             </div>
 
-                            <div class = "form-control">
-                                <input type="email" placeholder="Email-ID" name="email" id="emailR">
-                                <i class = "fa fa-check-circle"></i>
-                                <i class = "fa fa-exclamation-circle"></i>
+                            <div class="form-control">
+                                <input type="email" placeholder="Email Address" name="email" id="emailR">
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
                                 <small>Error message</small>
                             </div>
 
-                            <div class = "form-control">
+                            <div class="form-control">
                                 <input type="password" placeholder="Password" name="password" id="passwordR">
-                                <i class = "fa fa-eye" id = "show-passwordR"></i>
-                                <i class = "fa fa-check-circle"></i>
-                                <i class = "fa fa-exclamation-circle"></i>
+                                <i class="fa fa-eye" id="show-passwordR"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
                                 <small>Error message</small>
                             </div>
 
-                            <div class = "form-control">
+                            <div class="form-control">
                                 <input type="password" placeholder="Confirm Password" name="cpassword" id="cpasswordR">
-                                <i class = "fa fa-eye" id = "cshow-passwordR"></i>
-                                <i class = "fa fa-check-circle"></i>
-                                <i class = "fa fa-exclamation-circle"></i>
+                                <i class="fa fa-eye" id="cshow-passwordR"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
                                 <small>Error message</small>
                             </div>
 
                             <hr>
                             <p>By registering, you agree to our <a href="#">Terms & Conditions</a>.</p>
-                            <button type="submit" value = "send" class="lrbtn" id = "register">Register</button>
+                            <button type="submit" value="send" class="lrbtn" id="register">Register</button>
 
-                            <center><p style="color: black;">Already have an account? <a href="#"
-                                onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id00').style.display = 'none'">Login
-                                </a></p></center>
+                            <center>
+                                <p style="color: black;">Already have an account? <a href="#"
+                                        onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id00').style.display = 'none'">Login
+                                    </a></p>
+                            </center>
                         </div>
                     </form>
                 </div>
@@ -102,9 +104,9 @@
                 </button>
 
                 <div id="id01" class="modal">
-                    <form class="modal-content animate" action="" method="post" id = "formL">
+                    <form class="modal-content animate" action="" method="post" id="formL">
                         <div class="heading">
-                            <p style = "margin-top:4%;"><span style = "color:red;">Login</span>Form</p>
+                            <p style="margin-top:4%;"><span style="color:red;">Login</span>Form</p>
                             <span onclick="document.getElementById('id01').style.display = 'none'" class="close"
                                 title="Close">&times;</span>
                         </div>
@@ -121,30 +123,31 @@
                         </div> -->
 
                         <!--User-->
-                        <div class="containerR"><!--id="id001"> -->
-                            <div class = "form-control">
-                                <input type="email" placeholder="Email-ID" name="email" id="emailL">
-                                <i class = "fa fa-check-circle"></i>
-                                <i class = "fa fa-exclamation-circle"></i>
+                        <div class="containerR">
+                            <!--id="id001"> -->
+                            <div class="form-control">
+                                <input type="email" placeholder="Email Address" name="email" id="emailL">
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
                                 <small>Error message</small>
                             </div>
 
-                            <div class = "form-control">
+                            <div class="form-control">
                                 <input type="password" placeholder="Password" name="password" id="passwordL">
-                                <i class = "fa fa-eye" id = "show-passwordL"></i>
-                                <i class = "fa fa-check-circle"></i>
-                                <i class = "fa fa-exclamation-circle"></i>
+                                <i class="fa fa-eye" id="show-passwordL"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
                                 <small>Error message</small>
                             </div>
 
                             <hr>
-                            <button type="submit" value = "send" class ="lrbtn">Login</button>
+                            <button type="submit" value="send" class="lrbtn">Login</button>
 
-                            <p><a href = "">Forgot Password?</a></p>
+                            <p><a href="">Forgot Password?</a></p>
                             <span style="float:right;margin-top:-8%;">Create an Account? <a href="#"
-                                onclick="document.getElementById('id00').style.display = 'block'; document.getElementById('id01').style.display = 'none'">
-                                Register</a></span>
-                            
+                                    onclick="document.getElementById('id00').style.display = 'block'; document.getElementById('id01').style.display = 'none'">
+                                    Register</a></span>
+
                         </div>
 
                         <!-- Admin
@@ -175,12 +178,12 @@
                                         onclick="document.getElementById('id00').style.display = 'block';                                           document.getElementById('id01').style.display = 'none'">Register</a>
                                 </p>
                             </div> -->
-                        </div>
-                    </form>
                 </div>
-                <script type="text/javascript" src="Javascript/Login.js"></script>
+                </form>
             </div>
+            <script type="text/javascript" src="Javascript/Login.js"></script>
         </div>
+    </div>
     </div>
 
     <!--Background-->
@@ -414,7 +417,7 @@
             </div>
         </section>
         <script>
-            function function1() { swal("Under Construction","", "warning"); }
+            function function1() { swal("Under Construction", "", "warning"); }
         </script>
     </div>
 
