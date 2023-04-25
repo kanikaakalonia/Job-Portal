@@ -145,13 +145,27 @@ submit_button.onclick = (e) => {
 
 	const close = document.getElementById('id00');
 	const resetForm = document.getElementById('formR');
-	setTimeout(CloseModal, 2000);
+	setTimeout(CloseModal, 1200);
 
 	//After successful registration close the registration form display.
 	function CloseModal() {
-		if (VaildForm() !== false) {
+		if (VaildForm()) {
 			close.style.display = 'none';
 			resetForm.reset();
+			ChangesetSuccessFor(username);
+			ChangesetSuccessFor(email);
+			ChangesetSuccessFor(password);
+			ChangesetSuccessFor(cpassword);
+			showPassword.style.right = "10px";
+			cshowPassword.style.right = "10px";
 		}
+		else {
+			//do nothing
+		}
+	}
+
+	function ChangesetSuccessFor(input) {
+		const formControl = input.parentElement; //.form-control
+		formControl.className = 'form-control';
 	}
 }
