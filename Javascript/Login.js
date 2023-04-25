@@ -70,7 +70,7 @@ function setSuccessForL(input) {
 	formControl.className = 'form-control success';
 }
 
-function isEmailL(emailL) {
+function isEmailL(email) {
 	return /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(email);
 }
 
@@ -82,3 +82,26 @@ showPasswordL.addEventListener("click", function () {
 	const type = passwordFieldL.getAttribute("type") === "password" ? "text" : "password";
 	passwordFieldL.setAttribute("type", type);
 })
+
+const Login = document.querySelector('#Login');
+Login.onclick = (e) => {
+	e.preventDefault();
+	const emailL = document.getElementById('emailL').value;
+	const passwordL = document.getElementById('passwordL').value;
+
+	const Email = localStorage.getItem("emailR");
+	const Password = localStorage.getItem("passwordR");
+
+	if (emailL == "" && passwordL == "") {
+		swal("Oops..!", "Input field has no value", "error");
+	}
+	else {
+		if (emailL == Email && passwordL == Password) {
+			swal("Good Job!", "Login Successful", "success");
+		}
+		else {
+			swal("Oops..!", "Password does not match for this Email ID!", "error");
+		}
+	}
+}
+
