@@ -1,0 +1,152 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<meta http-equiv="Content-Type" content="text/html; charset = utf-8">
+	<meta name="language" content="English">
+
+	<title>Project</title>
+
+	<link rel="stylesheet" href="../CSS/style.css">
+	<link rel="stylesheet" href="../CSS/P&IButtons.css">
+	<link rel="stylesheet" href="../CSS/Footer.css">
+	<link rel="stylesheet" href="../CSS/Internship.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+</head>
+
+<body>
+	<script type="text/javascript" src="Javascript/sweetAlert.js"></script>
+
+	<!--Header-->
+	<div class="leftdiv header" id="Home" style="background-color: black;">
+		<button class="leftdiv" onclick="location.href = '../index.html'"
+			style="margin-left:5%;margin-top:1.1%;font-size:24px;font-weight:bold;color:black;background-color: white;border-radius: 6px;">
+			HIRED</button>
+
+		<!--Buttons-->
+		<div class="rightdiv">
+			<!-- <div class="dropdown">
+				<button class="dropbtn"><i class="fa fa-caret-down"></i>
+					<div class="dropdown-content">
+						<a href="#AboutUs">About Us</a>
+						<a href="#Events">Events</a>
+						<a href="#Drives">Drives</a>
+						<a href="">Alumni</a>
+						<a href="">Our Recruiters</a>
+					</div>
+				</button>
+			</div> -->
+
+			<button class="dropbtn" onclick="location.href = 'Placement.html';">
+				<i class="fa fa-building"></i> Placement
+			</button>
+
+			<button class="dropbtn" onclick="location.href = 'Internship.html';">
+				<i class="fa fa-briefcase"></i> Internship
+			</button>
+
+			<script>
+				function myCheck() {
+					var check = localStorage.getItem("Code");
+					if (check == "Dont You Dare!") {
+						//do nothing
+						//window.location.href = 'HTML/AllCompany.html';
+						//window.location.href = 'HTML/AllJobs.html';
+					}
+					else {
+						swal("Oops..!", "Please login first..!", "error");
+					}
+				}
+			</script>
+		</div>
+	</div>
+	</div>
+
+	<div class="leftdiv All_C&J">
+		<table class="demotbl">
+			<tr>
+				<th>COMPANY NAME</th>
+				<th>ABOUT THE COMPANY</th>
+				<th>JOBS</th>
+				<th>STIPEND</th>
+				<th>LAST DATE</th>
+				<th>APPLY HERE</th>
+			</tr>
+
+			<tr>
+				<td>MOVIDU TECHNOLOGIES</td>
+				<td>Movidu Technologies is a tech-based company with a vision to offer a solution to bridge the gap
+					between industry and college students.</td>
+				<td>LIVE PROJECT:- MARKET RESEARCH</td>
+				<td>5K TO 15K</td>
+				<td>15 March 2023</td>
+				<td><a class="a1" href="https://forms.gle/ev77VAvjUEBCHFVn9" target="_blank">APPLY</a></td>
+			</tr>
+
+			<tr>
+				<td>IFORTIS WORLDWIDE</td>
+				<td>IFORTIS WORLDWIDE has grown into one of India's leading companies and is a subsidiary of American
+					Ruler Private Limited. </td>
+				<td>Human Resource Trainee (Female)</td>
+				<td> Rs.2,000 on completion of all SOPs. </td>
+				<td>21st March 2023</td>
+				<td><a class="a1" href="http://ifortisworldwide.com/apply?ref_id=13502" target="_blank">APPLY</a></td>
+			</tr>
+
+			<tr>
+				<td>METYET</td>
+				<td> MetYet is a revolutionary dating app that has changed the way people find their perfect match. With
+					its advanced algorithms.</td>
+				<td>CAMPUS AMBASSADOR-JOB DESCRIPTION</td>
+				<td>5K</td>
+				<td>17 March 2023</td>
+				<td><a class="a1" href="https://forms.gle/2iDQc1ZYoKPfn7T46" target="_blank">APPLY</a></td>
+			</tr>
+
+			<tr>
+				<td>Muthoot Microfin Limited</td>
+				<td> Muthoot Microfin Limited is the flagship company of Muthoot Pappachan Group (MPG). Established in
+					1887, Muthoot Pappachan Group (MPG) is a diversified conglomerate with an overwhelming presence in
+					multiple verticals.</td>
+				<td>Relationship Officer</td>
+				<td>CTC:- 2.29LPA + INCENTIVES</td>
+				<td>20 March 2023</td>
+				<td><a class="a1" href="https://forms.gle/jzugMRuwEtdWAxLe6" target="_blank">APPLY</a></td>
+			</tr>
+		</table>
+	</div>
+
+	<!--Footer-->
+	<div class="leftdiv footer">
+		<footer class="footer-distributed">
+			<div class="footer-left">
+				<h3>Pro<span>ject</span></h3>
+				<p class="footer-links">
+					<a href=" "> Home </a>
+					<a href=" "> Blog </a>
+					<a href=" "> Pricing </a>
+					<a href=" "> About </a>
+					<a href="mailto:kushal4055@rla.du.ac.in" target="_blank"> Contact </a>
+				</p>
+				<p class="footer-company-name">RLA © 2023</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+
+			<!--Home button-->
+			<div class="rightdiv">
+				<a href="#Home" id="upper"><i class="fa fa-arrow-up"
+						style="font-size:xx-large;font-weight:bold;text-align:center;margin-top:7px;"></i></a>
+				<script type="text/javascript" src="../Javascript/UpperButton.js"></script>
+			</div>
+		</footer>
+	</div>
+
+</body>
+
+</html>

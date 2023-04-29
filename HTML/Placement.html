@@ -1,0 +1,154 @@
+<html>
+
+<head>
+	<meta name="viewport" content="width = device-width, initial-scale = 1">
+	<meta http-equiv="Content-Type" content="text/html; charset = utf-8">
+	<meta name="language" content="English">
+
+	<title>Project</title>
+
+	<link rel="stylesheet" href="../CSS/style.css">
+	<link rel="stylesheet" href="../CSS/P&IButtons.css">
+	<link rel="stylesheet" href="../CSS/Footer.css">
+	<link rel="stylesheet" href="../CSS/Placement.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="icon" type="image/x-icon" href="../Images/favicon.ico">
+</head>
+
+<body>
+	<script type="text/javascript" src="Javascript/sweetAlert.js"></script>
+
+	<!--Header-->
+	<div class="leftdiv header" id="Home" style="background-color: black;">
+		<button class="leftdiv" onclick="location.href = '../index.html'"
+			style="margin-left:5%;margin-top:1.1%;font-size:24px;font-weight:bold;color:black;background-color: white;border-radius: 6px;">
+			HIRED</button>
+
+		<!--Buttons-->
+		<div class="rightdiv">
+			<!-- <div class="dropdown">
+				<button class="dropbtn"><i class="fa fa-caret-down"></i>
+					<div class="dropdown-content">
+						<a href="#AboutUs">About Us</a>
+						<a href="#Events">Events</a>
+						<a href="#Drives">Drives</a>
+						<a href="">Alumni</a>
+						<a href="">Our Recruiters</a>
+					</div>
+				</button>
+			</div> -->
+
+			<button class="dropbtn" onclick="location.href = 'Placement.html';">
+				<i class="fa fa-building"></i> Placement
+			</button>
+
+			<button class="dropbtn" onclick="location.href = 'Internship.html';">
+				<i class="fa fa-briefcase"></i> Internship
+			</button>
+
+			<script>
+				function myCheck() {
+					var check = localStorage.getItem("Code");
+					if (check == "Dont You Dare!") {
+						//do nothing
+						//window.location.href = 'HTML/AllCompany.html';
+						//window.location.href = 'HTML/AllJobs.html';
+					}
+					else {
+						swal("Oops..!", "Please login first..!", "error");
+					}
+				}
+			</script>
+		</div>
+	</div>
+	</div>
+
+	<div class="leftdiv">
+		<table class="demotbl">
+			<tr>
+				<th>COMPANY NAME</th>
+				<th>ABOUT THE COMPANY</th>
+				<th>CONTACTS</th>
+				<th>BRAND MARK</th>
+			</tr>
+
+			<tr>
+				<td>Muthoot Microfin Limited</td>
+				<td>Muthoot Microfin Limited is the flagship company of Muthoot Pappachan Group (MPG). Established in
+					1887, Muthoot Pappachan Group (MPG) is a diversified conglomerate with an overwhelming presence in
+					multiple verticals. A journey of thousand miles begins with a single step.</td>
+				<td>Sanyam Aggarwal 9811223211
+					Kirti Ahuja 9354081469</td>
+				<td><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTjeYovxWZpCqGb_wV7j5tDtaUHna2IBusCvtPO0PuFN6ob5Uxd"
+						width="150" height="150"></td>
+			</tr>
+
+			<tr>
+				<td>Webkul</td>
+				<td>Webkul is a bootstrapped product-based IT organization that focuses on crafting problem-solving
+					apps, modules, and extensions for E-commerce, ERP, CRM & mobile. As an IT company, they help B2B and
+					B2C enterprises scale their online business.</td>
+				<td>Tarun Mantri- 7878354414
+					Megha Kataria - 89016 26100
+					Vineet Sharma-81304 62589</td>
+				<td><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcTd0xDBSpTR9gRTST7ufPuoqQv-Ox-L5OimG4Hgko6408tLun5G"
+						width="150" height="150"></td>
+			</tr>
+
+			<tr>
+				<td>Triveni Media</td>
+				<td>Triveni Media believes that ground level marketing is the first and the strongest step towards
+					growing a brand's customer base. We create integrated marketing strategies with a wide range of
+					marketing skills that are customised for each brand</td>
+				<td>Divye Narang - 9991915091
+					Muskan Sharma - 9053169207</td>
+				<td><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcRZZ9cXBJzbjgSgUhL_5RRe4uTWJDeFmFcMoT-gfS0JXLEy0MRH"
+						width="150" height="150"></td>
+			</tr>
+
+			<tr>
+				<td>UpGrad</td>
+				<td>UpGrad is an online education platform building the careers of tomorrow by offering the most
+					industry-relevant programs in an immersive learning experience. Their mission is to create a new
+					digital-first learning experience to deliver tangible career impact to individuals at scale.</td>
+				<td>Akshita Bhatnagar- 9313665176
+					Abhimanyu Chopra- 7703949249</td>
+				<td><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRv_XZHSFN6jX3M6-EcsOv3cAWBqKwEzA7ItwHkR12efKU-rNr9"
+						width="150" height="150"></td>
+			</tr>
+		</table>
+	</div>
+
+	<!--Footer-->
+	<div class="leftdiv footer">
+		<footer class="footer-distributed">
+			<div class="footer-left">
+				<h3>Pro<span>ject</span></h3>
+				<p class="footer-links">
+					<a href=" "> Home </a>
+					<a href=" "> Blog </a>
+					<a href=" "> Pricing </a>
+					<a href=" "> About </a>
+					<a href="mailto:kushal4055@rla.du.ac.in" target="_blank"> Contact </a>
+				</p>
+				<p class="footer-company-name">RLA © 2023</p>
+				<div class="footer-icons">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+					<a href="#"><i class="fa fa-linkedin"></i></a>
+					<a href="#"><i class="fa fa-github"></i></a>
+				</div>
+			</div>
+
+			<!--Home button-->
+			<div class="rightdiv">
+				<a href="#Home" id="upper"><i class="fa fa-arrow-up"
+						style="font-size:xx-large;font-weight:bold;text-align:center;margin-top:7px;"></i></a>
+				<script type="text/javascript" src="../Javascript/UpperButton.js"></script>
+			</div>
+		</footer>
+	</div>
+
+</body>
+
+</html>
