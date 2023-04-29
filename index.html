@@ -5,15 +5,15 @@
     <meta http-equiv="Content-Type" content="text/html;charset = utf-8">
     <meta name="language" content="English">
 
-    <title>Project</title>
+    <title>HIRED</title>
 
-    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/Button.css">
     <link rel="stylesheet" href="CSS/Login_&_Register_Form.css">
     <link rel="stylesheet" href="CSS/Slideshow.css">
     <link rel="stylesheet" href="CSS/Footer.css">
     <link rel="stylesheet" href="CSS/Showcase.css">
     <link rel="stylesheet" href="CSS/AboutUs.css">
+    <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
 </head>
@@ -23,19 +23,45 @@
 
     <!--Header-->
     <div class="leftdiv header" id="Home">
-        <span class="leftdiv neonText" onclick="location.href = 'index.html'"
-            style="margin-left:7%;margin-top:1.1%;font-size:24px;font-weight:bold;">PROJECT
-        </span>
+        <button class="leftdiv" onclick="location.href = 'index.html'"
+            style="margin-left:5%;margin-top:1.1%;font-size:24px;font-weight:bold;color:black;background-color: white;border-radius: 6px;">
+            HIRED</button>
 
         <!--Buttons-->
         <div class="rightdiv">
-            <button class="dropbtn" onclick="location.href = 'HTML/AllCompany.html'">
-                <i class="fa fa-building"></i> Companies
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#AboutUs">About Us</a>
+                        <a href="#Events">Events</a>
+                        <a href="#Drives">Drives</a>
+                        <a href="">Alumni</a>
+                        <a href="">Our Recruiters</a>
+                    </div>
+                </button>
+            </div>
+
+            <button class="dropbtn" onclick="location.href = 'HTML/Placement.html';">
+                <i class="fa fa-building"></i> Placement
             </button>
 
-            <button class="dropbtn" onclick="location.href = 'HTML/AllJobs.html'">
-                <i class="fa fa-briefcase"></i> Jobs
+            <button class="dropbtn" onclick="location.href = 'HTML/Internship.html';">
+                <i class="fa fa-briefcase"></i> Internship
             </button>
+
+            <script>
+                function myCheck() {
+                    var check = localStorage.getItem("Code");
+                    if (check == "Dont You Dare!") {
+                        //do nothing
+                        //window.location.href = 'HTML/AllCompany.html';
+                        //window.location.href = 'HTML/AllJobs.html';
+                    }
+                    else {
+                        swal("Oops..!", "Please login first..!", "error");
+                    }
+                }
+            </script>
 
             <div class="dropdown">
                 <button class="dropbtn" onclick="document.getElementById('id00').style.display = 'block'">
@@ -82,13 +108,17 @@
                             </div>
 
                             <hr>
+
                             <p>By registering, you agree to our <a href="#">Terms & Conditions</a>.</p>
                             <button type="submit" value="send" class="lrbtn" id="register">Register</button>
 
                             <center>
-                                <p style="color: black;">Already have an account? <a href="#"
-                                        onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id00').style.display = 'none'">Login
-                                    </a></p>
+                                <p style="color: whitesmoke;">Already have an account?
+                                    <a href="#"
+                                        onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id00').style.display = 'none'">
+                                        Login
+                                    </a>
+                                </p>
                             </center>
                         </div>
                     </form>
@@ -97,9 +127,9 @@
             </div>
 
             <!--Login Form-->
-            <div class="dropdown">
+            <div class="dropdown" style="margin-right: 6px;">
                 <button class="dropbtn" onclick="document.getElementById('id01').style.display = 'block';">
-                    <i class="fa fa-sign-in"></i> Login</i>
+                    <i class="fa fa-sign-in"></i> Login
                 </button>
 
                 <div id="id01" class="modal">
@@ -110,73 +140,78 @@
                                 title="Close">&times;</span>
                         </div>
 
-                        <!-- <div class="btn-group">
-                            <button
-                                onclick="document.getElementById('id001').style.display = 'block'; document.getElementById('id002').style.display = 'none'; mylb1()">
-                                <p id="lb1" class="p1l">User</p>
+                        <div class="btn-group">
+                            <button id="lb1" class="p1l"
+                                onclick="document.getElementById('id001').style.display = 'block';document.getElementById('id002').style.display = 'none'; mylb1();">
+                                User
                             </button>
-                            <button
-                                onclick="document.getElementById('id002').style.display = 'block'; document.getElementById('id001').style.display = 'none'; mylb2()">
-                                <p id="lb2" class="p2l">Admin</p>
+                            <button id="lb2" class="p2l"
+                                onclick="document.getElementById('id002').style.display = 'block';document.getElementById('id001').style.display = 'none'; mylb2();">
+                                Admin
                             </button>
-                        </div> -->
+                        </div>
 
                         <!--User-->
-                        <div class="containerR">
-                            <!--id="id001"> -->
+                        <div class="containerR" id="id001">
                             <div class="form-control">
-                                <input type="email" placeholder="Email Address" name="email" id="emailL">
+                                <input type="email" placeholder="Email Address" name="email" id="emailLu">
                                 <i class="fa fa-check-circle"></i>
                                 <i class="fa fa-exclamation-circle"></i>
                                 <small>Error message</small>
                             </div>
 
                             <div class="form-control">
-                                <input type="password" placeholder="Password" name="password" id="passwordL">
-                                <i class="fa fa-eye" id="show-passwordL"></i>
+                                <input type="password" placeholder="Password" name="password" id="passwordLu">
+                                <i class="fa fa-eye" id="show-passwordLu"></i>
                                 <i class="fa fa-check-circle"></i>
                                 <i class="fa fa-exclamation-circle"></i>
                                 <small>Error message</small>
                             </div>
 
                             <hr>
-                            <button type="submit" value="send" class="lrbtn" id="Login">Login</button>
 
-                            <p><a href="">Forgot Password?</a></p>
+                            <button type="submit" value="send" class="lrbtn" id="ULogin">Login</button>
+
+                            <p><a href="" style="color: white;">Forgot Password?</a></p>
                             <span style="float:right;margin-top:-8%;">Create an Account? <a href="#"
                                     onclick="document.getElementById('id00').style.display = 'block'; document.getElementById('id01').style.display = 'none'">
                                     Register</a></span>
-
                         </div>
 
-                        <!-- Admin
+                        <!-- Admin -->
                         <div class="containerL" id="id002">
-                            <label for="email"><b>Email : </b></label><br>
-                            <input type="text" placeholder="john@example.com" name="email" id="myInput2" required>
+                            <div class="form-control">
+                                <input type="email" placeholder="Email Address" name="email" id="emailLa" required>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
 
-                            <br>
-                            <p id="text2">WARNING! Caps lock is ON.</p><br>
+                            <div class="form-control">
+                                <input type="password" placeholder="Password" name="password" id="passwordLa">
+                                <i class="fa fa-eye" id="show-passwordLa"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
 
-                            <label for="psw"><b>Password : </b></label><br>
-                            <input type="password" placeholder="Must be atleast six characters" name="psw" id="myshow2"
-                                required>
-                            <input type="checkbox" onclick="myshowpsw2()" style="font-size:13px;">Show Password
+                            <div class="form-control">
+                                <input type="password" placeholder="Security Key" name="SecurityKey" id="SecurityKey">
+                                <i class="fa fa-eye" id="show-key"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
 
-                            <br>
-                            <p class="psw" style="float:right;">Forgot <a href="#" style="color:blue"> Password?</a></p>
-                            <br><br>
+                            <hr>
 
-                            <label for="securtiy"><b>Securtiy Key : </b></label><br>
-                            <input type="password" placeholder="Security key" name="security" id="mykey" required>
-                            <input type="checkbox" onclick="myshowkey()" style="font-size:13px;">Show key
+                            <button type="submit" value="send" class="lrbtn" id="ALogin">Login</button>
 
-                            <button class="lrbtn" type="submit">Login</button>
-
-                            <div class="containerR signup">
-                                <p style="color: black;">New to Project? <a href="#"
-                                        onclick="document.getElementById('id00').style.display = 'block';document.getElementById('id01').style.display = 'none'">Register</a>
-                                </p>
-                            </div> -->
+                            <p><a href="" style = "color: white;">Forgot Password?</a></p>
+                            <span style="float:right;margin-top:-8%;">Create an Account? <a href="#"
+                                    onclick="document.getElementById('id00').style.display = 'block';document.getElementById('id01').style.display = 'none'">
+                                    Register</a></span>
+                        </div>
                 </div>
                 </form>
             </div>
@@ -187,43 +222,17 @@
 
     <!--Background-->
     <div class="background">
-        <div class="positionbtn" id="move">
-            <button class="showbtn neonText1" onclick="location.href = '#AboutUs'">About Us</button>
-            <button class="showbtn neonText1" onclick="location.href = '#Events'">Events</button>
-            <button class="showbtn neonText1" onclick="location.href = '#Drives'">Drives</button>
-            <button class="showbtn neonText1" onclick="openSearch();" id="searchbtn"><i class="fa fa-search"
-                    style="font-size:x-large;"></i></button>
-            <form id="searchbar">
-                <input type="text" placeholder="What are you looking for?...">
-                <a class="showbtn" href="javascript:void(0)" onclick="closeSearch()"
-                    style="margin-left:-50px;text-decoration:none;"><i class="fa fa-search"
-                        style="font-size:x-large;color:black;"></i></a>
-            </form>
-        </div>
-        <script>
-            function openSearch() {
-                document.getElementById("searchbtn").style.display = "none";
-                document.getElementById("searchbar").style.display = "block";
-                document.getElementById("move").style.left = "35%";
-            }
-
-            function closeSearch() {
-                document.getElementById("searchbtn").style.display = "block";
-                document.getElementById("searchbar").style.display = "none";
-                document.getElementById("move").style.left = "60%";
-                document.getElementById("searchbtn").style.marginLeft = "450px";
-                document.getElementById("searchbtn").style.marginTop = "-7vh";
-            }
-        </script>
     </div>
 
     <!--About Us-->
     <div class="leftdiv About-Us" id="AboutUs">
         <div class="leftdiv">
             <hr>
-            <p style="color:black;font-size:36px;text-align:center;font-weight:bold;">The Project</p>
-            <hr>
-            <p class="About-para">
+            <i>
+                <p style="font-size:36px;text-align:center;font-weight:bold;">Placement Cell Management
+                    System</p>
+            </i>
+            <p class="About-para" style="border: 1px solid black;">
                 The increasing advantages of automated systems now are at the highest position as a result, many manual
                 processes are automated. Since the automated system is in demand nowadays.Job Portal is the operation,
                 control, and oversight of real estate management that indicates a need to be cared for, and monitored.
@@ -232,67 +241,67 @@
                 capital assets acquired and used to build, repair, and maintain end-item deliverables. Job Portal
                 involves the processes, systems, and manpower required to manage the life cycle of all acquired property
                 as defined above including acquisition, control, accountability, responsibility, maintenance,
-                utilization, and disposition.For example, an owner of a single-family may engage the services of a
+                utilization, and disposition.
+                <!-- For example, an owner of a single-family may engage the services of a
                 property management company. The company will then advertise the rental property, handle tenant
                 inquiries, screen applicants, select suitable candidates, draw up a lease agreement, conduct a move-in
                 inspection, move the tenant (s) into the property, and collect rental income. The company will then
                 coordinate any maintenance issues, and supply the owner(s) with financial statements and any relevant
-                information regarding the property, etc.This is a web application for the training and placement of
+                information regarding the property, etc. -->
+                This is a web application for the training and placement of
                 students. This system can be accessed throughout the organization with proper login credentials.
                 Students will be able to upload their personal and educational information, which the system will manage
                 efficiently. The main objective of this system is to manage the details of the Student, to reduce manual
-                work and time. To offer recruitment to applicants.</span>
+                work and time. To offer recruitment to applicants.
             </p>
         </div>
 
-        <p style="font-size:36px;text-align:center;"><b>Meet The Team</b>
-        <p>
-
-        <div id="About" class="leftdiv">
+        <div id="About" class="leftdiv" style="background-color: black;">
+            <p style="font-size:36px;text-align:center;font-weight: bold;color:white;"><u><i>Developer's Team</i></u>
+            </p>
             <div class="leftdiv">
                 <div class="container">
                     <img src="Images/avatar.jpg" alt="Photo">
                     <span><b>Name</b><br>The one who loves to explore. You will never see him sitting idle; either he
-                        will
-                        be coding or exploring places. And yeah, never ask him out on a lunch date because you will end
-                        up
-                        only with a glass of juice- his staple food.</span>
+                        will be coding or exploring places. And yeah, never ask him out on a lunch date because you will
+                        end
+                        up only with a glass of juice- his staple food.</span>
                 </div>
 
                 <div class="container">
                     <img src="Images/avatar.jpg" alt="Photo">
                     <span><b>Name</b><br>The one who loves to explore. You will never see him sitting idle; either he
-                        will
-                        be coding or exploring places. And yeah, never ask him out on a lunch date because you will end
-                        up
-                        only with a glass of juice- his staple food.</span>
+                        will be coding or exploring places. And yeah, never ask him out on a lunch date because you will
+                        end
+                        up only with a glass of juice- his staple food.</span>
                 </div>
 
                 <div class="container">
                     <img src="Images/avatar.jpg" alt="Photo">
                     <span><b>Name</b><br>The one who loves to explore. You will never see him sitting idle; either he
-                        will
-                        be coding or exploring places. And yeah, never ask him out on a lunch date because you will end
-                        up
-                        only with a glass of juice- his staple food.</span>
+                        will be coding or exploring places. And yeah, never ask him out on a lunch date because you will
+                        end
+                        up only with a glass of juice- his staple food.</span>
                 </div>
 
                 <div class="container">
                     <img src="Images/avatar.jpg" alt="Photo">
                     <span><b>Name</b><br>The one who loves to explore. You will never see him sitting idle; either he
-                        will
-                        be coding or exploring places. And yeah, never ask him out on a lunch date because you will end
-                        up
-                        only with a glass of juice- his staple food.</span>
+                        will be coding or exploring places. And yeah, never ask him out on a lunch date because you will
+                        end
+                        up only with a glass of juice- his staple food.</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="space leftdiv">
+    <div class="space leftdiv" style="background-color:black;">
     </div>
 
-    <div class="space leftdiv" style="background-color:#132020;">
+    <div class="space leftdiv" style="background-color:white;">
+    </div>
+
+    <div class="space leftdiv" style="background-color:white;">
     </div>
 
     <!--Slideshow-->
@@ -300,28 +309,18 @@
         <p class="s1">Events <i class="fa fa-arrow-right"></i></p>
         <div class="leftdiv slideshow-container1">
             <div class="mySlides1 animationR">
-                <img src="Images/Placement5.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+                <img src="Images/Placement8.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
             </div>
 
             <div class="mySlides1 animationR">
-                <img src="Images/Placement1.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+                <img src="Images/Placement6.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
             </div>
 
             <div class="mySlides1 animationR">
-                <img src="Images/Placement2.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
-            </div>
-
-            <div class="mySlides1 animationR">
-                <img src="Images/Placement3.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
-            </div>
-
-            <div class="mySlides1 animationR">
-                <img src="Images/Placement4.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+                <img src="Images/Placement7.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
             </div>
 
             <div style="text-align:center;margin-top:-5vh;z-index:2;">
-                <span class="dot1"></span>
-                <span class="dot1"></span>
                 <span class="dot1"></span>
                 <span class="dot1"></span>
                 <span class="dot1"></span>
@@ -329,33 +328,21 @@
         </div>
         <div class="leftdiv slideshow-container2">
             <div class="mySlides2 animationR">
-                <div class="numbertext">1/5</div>
-                <img src="Images/Placement1.jpg">
+                <div class="numbertext">1/3</div>
+                <img src="Images/Placement6.jpg">
             </div>
 
             <div class="mySlides2 animationR">
-                <div class="numbertext">2/5</div>
-                <img src="Images/Placement2.jpg">
+                <div class="numbertext">2/3</div>
+                <img src="Images/Placement7.jpg">
             </div>
 
             <div class="mySlides2 animationR">
-                <div class="numbertext">3/5</div>
-                <img src="Images/Placement3.jpg">
-            </div>
-
-            <div class="mySlides2 animationR">
-                <div class="numbertext">4/5</div>
-                <img src="Images/Placement4.jpg">
-            </div>
-
-            <div class="mySlides2 animationR">
-                <div class="numbertext">5/5</div>
-                <img src="Images/Placement5.jpg">
+                <div class="numbertext">3/3</div>
+                <img src="Images/Placement8.jpg">
             </div>
 
             <div style="text-align:center;margin-top:5px;z-index:2;">
-                <span class="dot2"></span>
-                <span class="dot2"></span>
                 <span class="dot2"></span>
                 <span class="dot2"></span>
                 <span class="dot2"></span>
@@ -366,28 +353,18 @@
         </div>
         <div class="leftdiv slideshow-container3">
             <div class="mySlides3 animationR">
-                <img src="Images/Placement2.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+                <img src="Images/Placement7.jpg" onclick="showSlides1();showSlides2();showSlides3();">
             </div>
 
             <div class="mySlides3 animationR">
-                <img src="Images/Placement3.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+                <img src="Images/Placement8.jpg" onclick="showSlides1();showSlides2();showSlides3();">
             </div>
 
             <div class="mySlides3 animationR">
-                <img src="Images/Placement4.jpg" onclick="showSlides1();showSlides2();showSlides3();">
-            </div>
-
-            <div class="mySlides3 animationR">
-                <img src="Images/Placement5.jpg" onclick="showSlides1();showSlides2();showSlides3();">
-            </div>
-
-            <div class="mySlides3 animationR">
-                <img src="Images/Placement1.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+                <img src="Images/Placement6.jpg" onclick="showSlides1();showSlides2();showSlides3();">
             </div>
 
             <div style="text-align:center;margin-top:-5vh;z-index:2;">
-                <span class="dot3"></span>
-                <span class="dot3"></span>
                 <span class="dot3"></span>
                 <span class="dot3"></span>
                 <span class="dot3"></span>
@@ -396,7 +373,7 @@
         <script type="text/javascript" src="Javascript/Slideshow.js"></script>
     </div>
 
-    <div class="leftdiv space" style="background-color:#132020;">
+    <div class="leftdiv space" style="background-color:black;">
     </div>
 
     <!--ShowCase-->
@@ -439,12 +416,12 @@
                 <p class="footer-links">
                     <a href=" "> Home </a>
                     <a href=" "> Blog </a>
-                    <a href=" "> Pricing </a>
-                    <a href=" "> About </a>
+                    <!-- <a href=" "> Pricing </a> -->
+                    <a href="#AboutUs"> About Us </a>
                     <a href="mailto:kushal4055@rla.du.ac.in" target="_blank"> Contact </a>
                 </p>
                 <p class="footer-company-name">RLA © 2023</p>
-                <div class="footer-icons">
+                <div class="footer-icons" style="background-color:#ffffff00;">
                     <a href="#"><i class="fa fa-facebook"></i></a>
                     <a href="#"><i class="fa fa-twitter"></i></a>
                     <a href="#"><i class="fa fa-linkedin"></i></a>
