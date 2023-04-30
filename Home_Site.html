@@ -5,22 +5,21 @@
     <meta http-equiv="Content-Type" content="text/html;charset = utf-8">
     <meta name="language" content="English">
 
-    <title>Project</title>
+    <title>HIRED</title>
 
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/Button.css">
-    <link rel="stylesheet" href="CSS/Login_&_Register_Form.css">
     <link rel="stylesheet" href="CSS/Slideshow.css">
     <link rel="stylesheet" href="CSS/Footer.css">
     <link rel="stylesheet" href="CSS/Showcase.css">
-    <link rel="stylesheet" href="CSS/AboutUs.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
 </head>
 
 <body>
-
+    <script type="text/javascript" src="Javascript/sweetAlert.js"></script>
     <script>
+        //Prevent from direct access
         var Code = localStorage.getItem("Code");
 
         if (Code == "Dont You Dare!") {
@@ -30,12 +29,182 @@
         }
     </script>
 
+    <script>
+        const name = localStorage.getItem("Username");
+        swal("Welcome " + name, "", "Images/welcome.jpg");
+    </script>
 
-    <h1>welcome:
-        <script> document.write(localStorage.getItem("Username"))</script>
-    </h1>
+    <!--Header-->
+    <div class="leftdiv header" id="Home">
+        <button class="leftdiv" onclick="location.href = 'Home_Site.html'"
+            style="margin-left:5%;margin-top:1.1%;font-size:24px;font-weight:bold;color:black;background-color: white;border-radius: 6px;">
+            HIRED</button>
 
-    <a href="logout.html">Logout</a>
+        <!--Buttons-->
+        <div class="rightdiv">
+            <button class="dropbtn" onclick="location.href = 'HTML/Alumni.html';">
+                <i class="fa fa-user-circle"></i> Alumni
+            </button>
+
+            <button class="dropbtn" onclick="location.href = 'HTML/Placement.html';">
+                <i class="fa fa-building"></i> Placement
+            </button>
+
+            <button class="dropbtn" onclick="location.href = 'HTML/Internship.html';">
+                <i class="fa fa-briefcase"></i> Internship
+            </button>
+
+            <button class="dropbtn" onclick="location.href = 'Logout.html';" style="margin-right: 10px;">
+                <i class="fa fa-sign-out"></i> Logout
+            </button>
+        </div>
+    </div>
+
+    <!--Background-->
+    <div class="background">
+    </div>
+
+    <div class="space leftdiv" style="background-color:black;">
+    </div>
+
+    <div class="space leftdiv" style="background-color:black;">
+    </div>
+
+    <div class="space leftdiv" style="background-color:white;">
+    </div>
+
+    <div class="space leftdiv" style="background-color:white;">
+    </div>
+
+    <!--Slideshow-->
+    <div class="leftdiv slideshow" id="Events">
+        <p class="s1">Events <i class="fa fa-arrow-right"></i></p>
+        <div class="leftdiv slideshow-container1">
+            <div class="mySlides1 animationR">
+                <img src="Images/Placement3.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+            </div>
+
+            <div class="mySlides1 animationR">
+                <img src="Images/Placement2.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+            </div>
+
+            <div class="mySlides1 animationR">
+                <img src="Images/Placement1.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+            </div>
+
+            <div style="text-align:center;margin-top:-5vh;z-index:2;">
+                <span class="dot1"></span>
+                <span class="dot1"></span>
+                <span class="dot1"></span>
+            </div>
+        </div>
+        <div class="leftdiv slideshow-container2">
+            <div class="mySlides2 animationR">
+                <div class="numbertext">1/3</div>
+                <img src="Images/Placement1.jpg">
+            </div>
+
+            <div class="mySlides2 animationR">
+                <div class="numbertext">2/3</div>
+                <img src="Images/Placement2.jpg">
+            </div>
+
+            <div class="mySlides2 animationR">
+                <div class="numbertext">3/3</div>
+                <img src="Images/Placement3.jpg">
+            </div>
+
+            <div style="text-align:center;margin-top:5px;z-index:2;">
+                <span class="dot2"></span>
+                <span class="dot2"></span>
+                <span class="dot2"></span>
+            </div>
+
+            <a class="prev" onclick="prevSlide1();prevSlide2();prevSlide3();">&#10094;</a>
+            <a class="next" onclick="showSlides1();showSlides2();showSlides3();">&#10095;</a>
+        </div>
+        <div class="leftdiv slideshow-container3">
+            <div class="mySlides3 animationR">
+                <img src="Images/Placement3.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+            </div>
+
+            <div class="mySlides3 animationR">
+                <img src="Images/Placement2.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+            </div>
+
+            <div class="mySlides3 animationR">
+                <img src="Images/Placement1.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+            </div>
+
+            <div style="text-align:center;margin-top:-5vh;z-index:2;">
+                <span class="dot3"></span>
+                <span class="dot3"></span>
+                <span class="dot3"></span>
+            </div>
+        </div>
+        <script type="text/javascript" src="Javascript/Slideshow.js"></script>
+    </div>
+
+    <div class="leftdiv space" style="background-color:black;">
+    </div>
+
+    <!--ShowCase-->
+    <div class="leftdiv showcase" id="Drives">
+        <!--Space-->
+        <div class="leftdiv space">
+        </div>
+        <p class="t1">Drives <i class="fa fa-arrow-right"></i></p>
+        <section id="product" class="section-p1">
+            <div class="containerpro">
+                <div class="pro" onclick="location.href='HTML/Placememt.html'">
+                    <img src="Images/Placement.jpeg" alt="Placememt">
+                    <span><b>Placememt</b></span>
+                </div>
+    
+                <div class="pro" onclick="location.href='HTML/Internship.html'">
+                    <img src="Images/Internship.jpeg" alt="Internship">
+                    <span><b>Internship</b></span>
+                </div>
+    
+                <div class="pro" onclick="location.href='HTML/Blog.html'">
+                    <img src="Images/Blog.jpeg" alt="Blog">
+                    <span><b>Blog</b></span>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="leftdiv space">
+    </div>
+
+    <!--Footer-->
+    <div class="leftdiv footer" id="footer">
+        <footer class="footer-distributed">
+            <div class="footer-left">
+                <h3>AKKV</h3>
+                <p class="footer-links">
+                    <a href="HTML/blog.html"> Blog </a>
+                    <a href="#"> Feedback </a>
+                    <a href="#AboutUs"> About Us </a>
+                    <a href="mailto:kushal4055@rla.du.ac.in" target="_blank"> Contact </a>
+                </p>
+                <p class="footer-company-name">RLA © 2023</p>
+                <div class="footer-icons" style="background-color:#ffffff00;">
+                    <a href="https://www.instagram.com/placementcell_rlac/?hl=en"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/pathwaysrlac/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://in.linkedin.com/company/theplacementcell"><i class="fa fa-linkedin"></i></a>
+
+                </div>
+            </div>
+
+            <!--Home button-->
+            <div class="rightdiv">
+                <a href="#Home" id="upper"><i class="fa fa-arrow-up"
+                        style="font-size:xx-large;font-weight:bold;text-align:center;margin-top:14%;"></i></a>
+                <script type="text/javascript" src="Javascript/UpperButton.js"></script>
+            </div>
+        </footer>
+    <!-- </div> -->
 
 </body>
 
