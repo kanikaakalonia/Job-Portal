@@ -35,33 +35,14 @@
                         <a href="#AboutUs">About Us</a>
                         <a href="#Events">Events</a>
                         <a href="#Drives">Drives</a>
-                        <a href="HTML/Alumni.html">Alumni</a>
                         <a href="">Our Recruiters</a>
                     </div>
                 </button>
             </div>
 
-            <button class="dropbtn" onclick="location.href = 'HTML/Placement.html';">
-                <i class="fa fa-building"></i> Placement
+            <button class="dropbtn" onclick="location.href = 'HTML/Alumni.html';">
+                <i class="fa fa-user-circle"></i> Alumni
             </button>
-
-            <button class="dropbtn" onclick="location.href = 'HTML/Internship.html';">
-                <i class="fa fa-briefcase"></i> Internship
-            </button>
-
-            <script>
-                function myCheck() {
-                    var check = localStorage.getItem("Code");
-                    if (check == "Dont You Dare!") {
-                        //do nothing
-                        //window.location.href = 'HTML/AllCompany.html';
-                        //window.location.href = 'HTML/AllJobs.html';
-                    }
-                    else {
-                        swal("Oops..!", "Please login first..!", "error");
-                    }
-                }
-            </script>
 
             <div class="dropdown">
                 <button class="dropbtn" onclick="document.getElementById('id00').style.display = 'block'">
@@ -112,14 +93,12 @@
                             <p>By registering, you agree to our <a href="#">Terms & Conditions</a>.</p>
                             <button type="submit" value="send" class="lrbtn" id="register">Register</button>
 
-                            <center>
-                                <p style="color: whitesmoke;">Already have an account?
-                                    <a href="#"
-                                        onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id00').style.display = 'none'">
-                                        Login
-                                    </a>
-                                </p>
-                            </center>
+                            <p style="color: whitesmoke;text-align: center;">Already have an account?
+                                <a href="#"
+                                    onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id00').style.display = 'none'">
+                                    Login
+                                </a>
+                            </p>
                         </div>
                     </form>
                 </div>
@@ -207,7 +186,7 @@
 
                             <button type="submit" value="send" class="lrbtn" id="ALogin">Login</button>
 
-                            <p><a href="" style = "color: white;">Forgot Password?</a></p>
+                            <p><a href="" style="color: white;">Forgot Password?</a></p>
                             <span style="float:right;margin-top:-8%;">Create an Account? <a href="#"
                                     onclick="document.getElementById('id00').style.display = 'block';document.getElementById('id01').style.display = 'none'">
                                     Register</a></span>
@@ -257,36 +236,36 @@
         </div>
 
         <div id="About" class="leftdiv" style="background-color: black;">
-            <p style="font-size:36px;text-align:center;font-weight: bold;color:white;"><u><i>Developer's Team</i></u>
+            <p style="font-size:36px;text-align:center;font-weight: bold;color:white;"><u><i>Meet the Team</i></u>
             </p>
             <div class="leftdiv">
                 <div class="container">
-                    <img src="Images/avatar.jpg" alt="Photo">
-                    <span><b>Name</b><br>The one who loves to explore. You will never see him sitting idle; either he
+                    <img src="Images/adi.jpg" alt="Photo">
+                    <span><b>Aditya</b><br>The one who loves to explore. You will never see him sitting idle; either he
                         will be coding or exploring places. And yeah, never ask him out on a lunch date because you will
                         end
                         up only with a glass of juice- his staple food.</span>
                 </div>
 
                 <div class="container">
-                    <img src="Images/avatar.jpg" alt="Photo">
-                    <span><b>Name</b><br>The one who loves to explore. You will never see him sitting idle; either he
+                    <img src="Images/kanika.jpg" alt="Photo">
+                    <span><b>Kanika</b><br>The one who loves to explore. You will never see him sitting idle; either he
                         will be coding or exploring places. And yeah, never ask him out on a lunch date because you will
                         end
                         up only with a glass of juice- his staple food.</span>
                 </div>
 
                 <div class="container">
-                    <img src="Images/avatar.jpg" alt="Photo">
-                    <span><b>Name</b><br>The one who loves to explore. You will never see him sitting idle; either he
+                    <img src="Images/kushal.jpg" alt="Photo">
+                    <span><b>Kushal</b><br>The one who loves to explore. You will never see him sitting idle; either he
                         will be coding or exploring places. And yeah, never ask him out on a lunch date because you will
                         end
                         up only with a glass of juice- his staple food.</span>
                 </div>
 
                 <div class="container">
-                    <img src="Images/avatar.jpg" alt="Photo">
-                    <span><b>Name</b><br>The one who loves to explore. You will never see him sitting idle; either he
+                    <img src="Images/vishal.jpg" alt="Photo">
+                    <span><b>Vishal</b><br>The one who loves to explore. You will never see him sitting idle; either he
                         will be coding or exploring places. And yeah, never ask him out on a lunch date because you will
                         end
                         up only with a glass of juice- his staple food.</span>
@@ -309,15 +288,15 @@
         <p class="s1">Events <i class="fa fa-arrow-right"></i></p>
         <div class="leftdiv slideshow-container1">
             <div class="mySlides1 animationR">
-                <img src="Images/Placement8.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+                <img src="Images/Placement3.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
             </div>
 
             <div class="mySlides1 animationR">
-                <img src="Images/Placement6.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+                <img src="Images/Placement2.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
             </div>
 
             <div class="mySlides1 animationR">
-                <img src="Images/Placement7.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+                <img src="Images/Placement1.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
             </div>
 
             <div style="text-align:center;margin-top:-5vh;z-index:2;">
@@ -329,17 +308,17 @@
         <div class="leftdiv slideshow-container2">
             <div class="mySlides2 animationR">
                 <div class="numbertext">1/3</div>
-                <img src="Images/Placement6.jpg">
+                <img src="Images/Placement1.jpg">
             </div>
 
             <div class="mySlides2 animationR">
                 <div class="numbertext">2/3</div>
-                <img src="Images/Placement7.jpg">
+                <img src="Images/Placement2.jpg">
             </div>
 
             <div class="mySlides2 animationR">
                 <div class="numbertext">3/3</div>
-                <img src="Images/Placement8.jpg">
+                <img src="Images/Placement3.jpg">
             </div>
 
             <div style="text-align:center;margin-top:5px;z-index:2;">
@@ -353,15 +332,15 @@
         </div>
         <div class="leftdiv slideshow-container3">
             <div class="mySlides3 animationR">
-                <img src="Images/Placement7.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+                <img src="Images/Placement2.jpg" onclick="showSlides1();showSlides2();showSlides3();">
             </div>
 
             <div class="mySlides3 animationR">
-                <img src="Images/Placement8.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+                <img src="Images/Placement3.jpg" onclick="showSlides1();showSlides2();showSlides3();">
             </div>
 
             <div class="mySlides3 animationR">
-                <img src="Images/Placement6.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+                <img src="Images/Placement1.jpg" onclick="showSlides1();showSlides2();showSlides3();">
             </div>
 
             <div style="text-align:center;margin-top:-5vh;z-index:2;">
@@ -385,23 +364,23 @@
         <section id="product" class="section-p1">
             <div class="containerpro">
                 <div class="pro" onclick="function1()">
-                    <img src="Images/ManageJob.jpg" alt="Manage Job">
-                    <span><b>Manage Jobs</b></span>
+                    <img src="Images/Placement.jpeg" alt="Placememt">
+                    <span><b>Placememt</b></span>
                 </div>
 
                 <div class="pro" onclick="function1()">
-                    <img src="Images/ManageCompany.jpg" alt="Manage Company">
-                    <span><b>Manage Company</b></span>
+                    <img src="Images/Internship.jpeg" alt="Internship">
+                    <span><b>Internship</b></span>
                 </div>
 
                 <div class="pro" onclick="function1()">
-                    <img src="Images/ManageSalary.jpg" alt="Manage Salary">
-                    <span><b>Manage Salary</b></span>
+                    <img src="Images/Blog.jpeg" alt="Blog">
+                    <span><b>Blog</b></span>
                 </div>
             </div>
         </section>
         <script>
-            function function1() { swal("Under Construction", "", "warning"); }
+            function function1() { swal("Oops..!", "Please login first..!", "error"); }
         </script>
     </div>
 
@@ -412,20 +391,19 @@
     <div class="leftdiv footer" id="footer">
         <footer class="footer-distributed">
             <div class="footer-left">
-                <h3>Project</h3>
+                <h3>AKKV</h3>
                 <p class="footer-links">
-                    <a href=" "> Home </a>
-                    <a href=" "> Blog </a>
-                    <!-- <a href=" "> Pricing </a> -->
+                    <!-- <a href="HTML/blog.html"> Blog </a> -->
+                    <a href="#"> Feedback </a>
                     <a href="#AboutUs"> About Us </a>
                     <a href="mailto:kushal4055@rla.du.ac.in" target="_blank"> Contact </a>
                 </p>
                 <p class="footer-company-name">RLA © 2023</p>
                 <div class="footer-icons" style="background-color:#ffffff00;">
-                    <a href="#"><i class="fa fa-facebook"></i></a>
-                    <a href="#"><i class="fa fa-twitter"></i></a>
-                    <a href="#"><i class="fa fa-linkedin"></i></a>
-                    <a href="#"><i class="fa fa-github"></i></a>
+                    <a href="https://www.instagram.com/placementcell_rlac/?hl=en"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/pathwaysrlac/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://in.linkedin.com/company/theplacementcell"><i class="fa fa-linkedin"></i></a>
+
                 </div>
             </div>
 
