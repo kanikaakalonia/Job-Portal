@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="CSS/Footer.css">
     <link rel="stylesheet" href="CSS/Showcase.css">
     <link rel="stylesheet" href="CSS/AboutUs.css">
+    <link rel="stylesheet" href="CSS/Profile.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
 </head>
@@ -37,26 +38,75 @@
 
     <!--Header-->
     <div class="leftdiv header" id="Home">
+        <img src="Images/Logo.jpg" style="border-radius: 50%;width: 60;margin-top:0.5%;margin-left:10px;"
+            class="leftdiv">
         <button class="leftdiv" onclick="location.href = 'Home_Site.html'"
-            style="margin-left:5%;margin-top:1.1%;font-size:24px;font-weight:bold;color:black;background-color: white;border-radius: 6px;">
+            style="margin-left:7px;margin-top:1.4%;font-size:24px;font-weight:bold;color:black;background-color: white;border-radius: 6px;">
             HIRED</button>
 
         <!--Buttons-->
         <div class="rightdiv">
-            <button class="dropbtn" onclick="location.href = 'HTML/Alumni.html';">
+            <button class="dropbtn" onclick="location.href = 'HTML/Alumni.html'">
                 <i class="fa fa-user-circle"></i> Alumni
             </button>
 
-            <button class="dropbtn" onclick="location.href = 'HTML/Placement.html';">
+            <button class="dropbtn" onclick="location.href = 'HTML/Placement.html'">
                 <i class="fa fa-building"></i> Placement
             </button>
 
-            <button class="dropbtn" onclick="location.href = 'HTML/Internship.html';">
+            <button class="dropbtn" onclick="location.href = 'HTML/Internship.html'">
                 <i class="fa fa-briefcase"></i> Internship
             </button>
 
-            <button class="dropbtn" onclick="location.href = 'logout.html';" style="margin-right: 10px;">
-                <i class="fa fa-sign-out"></i> Logout
+            <button class="dropbtn" style="margin-right: 10px;">
+                <nav>
+                    <i class="fa fa-user user-pic" onclick="toggleMenu()">Profile</i>
+
+                    <div class="sub-menu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                            <div class="user-info">
+                                <i class="fa fa-user-circle"></i>
+                                <h3>
+                                    <script>document.write(localStorage.getItem("Username"))</script>
+                                </h3>
+                            </div>
+                            <hr>
+
+                            <a href="#" class="sub-menu-link">
+                                <i class="fa fa-user-plus"></i>
+                                <p>Edit profile</p>
+                                <span>></span>
+                            </a>
+
+                            <a href="#" class="sub-menu-link">
+                                <i class="fa fa-cog"></i>
+                                <p>Setting & Privacy</p>
+                                <span>></span>
+                            </a>
+
+                            <a href="#" class="sub-menu-link">
+                                <i class="fa fa-question-circle"></i>
+                                <p>Help & Support</p>
+                                <span>></span>
+                            </a>
+
+                            <a href="logout.html" class="sub-menu-link">
+                                <i class="fa fa-sign-out"></i>
+                                <p>Logout</p>
+                                <span>></span>
+                            </a>
+                        </div>
+                    </div>
+
+                    <script>
+                        let subMenu = document.getElementById("subMenu");
+
+                        function toggleMenu() {
+                            subMenu.classList.toggle("open-menu");
+                        }
+                    </script>
+
+                </nav>
             </button>
         </div>
     </div>
@@ -114,11 +164,11 @@
             </div>
 
             <div class="mySlides1 animationR">
-                <img src="Images/Placement2.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+                <img src="Images/Placement1.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
             </div>
 
             <div class="mySlides1 animationR">
-                <img src="Images/Placement1.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+                <img src="Images/Placement2.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
             </div>
 
             <div style="text-align:center;margin-top:-5vh;z-index:2;">
@@ -154,11 +204,11 @@
         </div>
         <div class="leftdiv slideshow-container3">
             <div class="mySlides3 animationR">
-                <img src="Images/Placement3.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+                <img src="Images/Placement2.jpg" onclick="showSlides1();showSlides2();showSlides3();">
             </div>
 
             <div class="mySlides3 animationR">
-                <img src="Images/Placement2.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+                <img src="Images/Placement3.jpg" onclick="showSlides1();showSlides2();showSlides3();">
             </div>
 
             <div class="mySlides3 animationR">
@@ -189,12 +239,12 @@
                     <img src="Images/Placement.jpeg" alt="Placememt">
                     <span><b>Placememt</b></span>
                 </div>
-    
+
                 <div class="pro" onclick="location.href='HTML/Internship.html'">
                     <img src="Images/Internship.jpeg" alt="Internship">
                     <span><b>Internship</b></span>
                 </div>
-    
+
                 <div class="pro" onclick="location.href='HTML/blog.html'">
                     <img src="Images/Blog.jpeg" alt="Blog">
                     <span><b>Blog</b></span>
@@ -233,7 +283,7 @@
                 <script type="text/javascript" src="Javascript/UpperButton.js"></script>
             </div>
         </footer>
-    <!-- </div> -->
+    </div>
 
 </body>
 
