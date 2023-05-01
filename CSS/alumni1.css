@@ -6,7 +6,7 @@ body {
 }
 
 header {
-	background-image: url("almimg.jpg");
+	background-image: url("../Images/almimg.jpg");
     background-size: cover;
     background-position: 0px 750px;
 	color: #fff;
