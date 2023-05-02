@@ -9,8 +9,8 @@
 
     <link rel="stylesheet" href="CSS/style.css">
     <link rel="stylesheet" href="CSS/Button.css">
-    <link rel="stylesheet" href="CSS/Login_&_Register_Form.css">
     <link rel="stylesheet" href="CSS/Slideshow.css">
+    <link rel="stylesheet" href="CSS/Login_&_Register_Form.css">
     <link rel="stylesheet" href="CSS/Footer.css">
     <link rel="stylesheet" href="CSS/Showcase.css">
     <link rel="stylesheet" href="CSS/AboutUs.css">
@@ -19,23 +19,112 @@
 </head>
 
 <body>
-
+    <script type="text/javascript" src="Javascript/sweetAlert.js"></script>
     <script>
-        var Code = localStorage.getItem("Security");
+        var Code2 = localStorage.getItem("Security");
 
-        if (Code == "Dont You Dare!") {
+        if (Code2 == "Dont You Dare!") {
             //do nothing
         } else {
             window.location.replace("index.html");
         }
     </script>
 
-
-    <h1>welcome:
-        <script> document.write(localStorage.getItem("Username"))</script>
+    <h1>
+        <script> swal("Welcome Admin", "", "Images/welcome.jpg");</script>
     </h1>
 
-    <a href="logout.html">Logout</a>
+    <!--Header-->
+    <div class="leftdiv header" id="Home">
+        <img src="Images/Logo.jpg" style="border-radius: 50%;width: 60;margin-top:0.5%;margin-left:10px;"
+            class="leftdiv">
+        <button class="leftdiv" onclick="location.href = 'Home_Site.html'"
+            style="margin-left:7px;margin-top:1.4%;font-size:24px;font-weight:bold;color:black;background-color: white;border-radius: 6px;">
+            HIRED</button>
+
+        <!--Buttons-->
+        <div class="rightdiv">
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="document.getElementById('id00').style.display = 'block'">
+                    <i class="fa fa-user-plus"></i> Add User
+                </button>
+
+                <div id="id00" class="modal">
+                    <form class="modal-content animate" action="" method="post" id="formR">
+                        <div class="heading">
+                            <p style="margin-top:4%;"><span style="color:red;">User</span> Details</p>
+                            <span onclick="document.getElementById('id00').style.display='none'" class="close"
+                                title="Close">&times;</span>
+                        </div>
+
+                        <div class="containerR">
+                            <div class="form-control">
+                                <input type="text" placeholder="Username" name="username" id="usernameR">
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <div class="form-control">
+                                <input type="email" placeholder="Email Address" name="email" id="emailR">
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <div class="form-control">
+                                <input type="password" placeholder="Password" name="password" id="passwordR">
+                                <i class="fa fa-eye" id="show-passwordR"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <div class="form-control">
+                                <input type="password" placeholder="Confirm Password" name="cpassword" id="cpasswordR">
+                                <i class="fa fa-eye" id="cshow-passwordR"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <hr>
+
+                            <button type="submit" value="send" class="lrbtn" id="register">Add User</button>
+                        </div>
+                    </form>
+                </div>
+                <script type="text/javascript" src="Javascript/Register.js"></script>
+            </div>
+
+            <button class="dropbtn" onclick="myDelete();checkDelete()">
+                Delete User
+            </button>
+
+            <button class="dropbtn" onclick="location.href = 'logout.html'">
+                <i class="fa fa-sign-out"></i> Logout
+            </button>
+        </div>
+        <script>
+            function myDelete() {
+                localStorage.removeItem("Username");
+                localStorage.removeItem("Email");
+                localStorage.removeItem("Password");
+                return true;
+            }
+
+            function checkDelete() {
+                if (myDelete()) {
+                    swal("User Account delete successfully", "", "success");
+                }
+            }
+        </script>
+    </div>
+
+    <!--Background-->
+    <div class="background1">
+    </div>
 
 </body>
 
