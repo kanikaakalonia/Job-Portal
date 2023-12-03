@@ -92,8 +92,8 @@ ULogin.onclick = (e) => {
 	const emailL = document.getElementById('emailLu').value;
 	const passwordL = document.getElementById('passwordLu').value;
 
-	const Email = localStorage.getItem("Email");
-	const Password = localStorage.getItem("Password");
+	const Email = JSON.parse(localStorage.getItem("Email"));
+	const Password = JSON.parse(localStorage.getItem("Password"));
 
 	if (emailL == "") {
 		swal("Oops..!", "Please enter your Email ID...!", "error");

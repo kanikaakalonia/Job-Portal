@@ -1,0 +1,411 @@
+<html>
+
+<head>
+    <meta name="viewport" content="width = device-width, initial-scale = 1">
+    <meta http-equiv="Content-Type" content="text/html;charset = utf-8">
+    <meta name="language" content="English">
+
+    <title>HIRED</title>
+
+    <link rel="stylesheet" href="CSS/Button.css">
+    <link rel="stylesheet" href="CSS/Login_&_Register_Form.css">
+    <link rel="stylesheet" href="CSS/Slideshow.css">
+    <link rel="stylesheet" href="CSS/Footer.css">
+    <link rel="stylesheet" href="CSS/Showcase.css">
+    <link rel="stylesheet" href="CSS/AboutUs.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="icon" type="image/x-icon" href="Images/favicon.ico">
+</head>
+
+<body>
+    <script type="text/javascript" src="Javascript/sweetAlert.js"></script>
+
+    <!--Header-->
+    <div class="leftdiv header" id="Home">
+        <img src="Images/Logo.jpg" style="border-radius: 50%;width: 60;margin-top:0.5%;margin-left:10px;"
+            class="leftdiv">
+        <button class="leftdiv" onclick="location.href = 'index.html'"
+            style="margin-left:7px;margin-top:1.4%;font-size:24px;font-weight:bold;color:black;background-color: white;border-radius: 6px;">
+            HIRED</button>
+
+        <!--Buttons-->
+        <div class="rightdiv">
+            <div class="dropdown">
+                <button class="dropbtn"><i class="fa fa-caret-down"></i>
+                    <div class="dropdown-content">
+                        <a href="#AboutUs">About Us</a>
+                        <a href="#Events">Events</a>
+                        <a href="#Drives">Drives</a>
+                        <!-- <a href="">Our Recruiters</a> -->
+                    </div>
+                </button>
+            </div>
+
+            <button class="dropbtn" onclick="location.href = 'HTML/Alumni.html';">
+                <i class="fa fa-user-circle"></i> Alumni
+            </button>
+
+            <div class="dropdown">
+                <button class="dropbtn" onclick="document.getElementById('id00').style.display = 'block'">
+                    <i class="fa fa-user-plus"></i> Register
+                </button>
+
+                <div id="id00" class="modal">
+                    <form class="modal-content animate" action="" method="post" id="formR">
+                        <div class="heading">
+                            <p style="margin-top:4%;"><span style="color:red;">Registration</span>Form</p>
+                            <span onclick="document.getElementById('id00').style.display='none'" class="close"
+                                title="Close">&times;</span>
+                        </div>
+
+                        <div class="containerR">
+                            <div class="form-control">
+                                <input type="text" placeholder="Username" name="username" id="usernameR">
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <div class="form-control">
+                                <input type="email" placeholder="Email Address" name="email" id="emailR">
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <div class="form-control">
+                                <input type="password" placeholder="Password" name="password" id="passwordR">
+                                <i class="fa fa-eye" id="show-passwordR"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <div class="form-control">
+                                <input type="password" placeholder="Confirm Password" name="cpassword" id="cpasswordR">
+                                <i class="fa fa-eye" id="cshow-passwordR"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <hr>
+
+                            <p>By registering, you agree to our <a href="#">Terms & Conditions</a>.</p>
+                            <button type="submit" value="send" class="lrbtn" id="register">Register</button>
+
+                            <p style="color: whitesmoke;text-align: center;">Already have an account?
+                                <a href="#"
+                                    onclick="document.getElementById('id01').style.display = 'block'; document.getElementById('id00').style.display = 'none'">
+                                    Login
+                                </a>
+                            </p>
+                        </div>
+                    </form>
+                </div>
+                <script type="text/javascript" src="Javascript/Register.js"></script>
+            </div>
+
+            <!--Login Form-->
+            <div class="dropdown" style="margin-right: 6px;">
+                <button class="dropbtn" onclick="document.getElementById('id01').style.display = 'block';">
+                    <i class="fa fa-sign-in"></i> Login
+                </button>
+
+                <div id="id01" class="modal">
+                    <form class="modal-content animate" action="" method="post" id="formL">
+                        <div class="heading">
+                            <p style="margin-top:4%;"><span style="color:red;">Login</span>Form</p>
+                            <span onclick="document.getElementById('id01').style.display = 'none'" class="close"
+                                title="Close">&times;</span>
+                        </div>
+
+                        <div class="btn-group">
+                            <button id="lb1" class="p1l"
+                                onclick="document.getElementById('id001').style.display = 'block';document.getElementById('id002').style.display = 'none'; mylb1();">
+                                User
+                            </button>
+                            <button id="lb2" class="p2l"
+                                onclick="document.getElementById('id002').style.display = 'block';document.getElementById('id001').style.display = 'none'; mylb2();">
+                                Admin
+                            </button>
+                        </div>
+
+                        <!--User-->
+                        <div class="containerR" id="id001">
+                            <div class="form-control">
+                                <input type="email" placeholder="Email Address" name="email" id="emailLu">
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <div class="form-control">
+                                <input type="password" placeholder="Password" name="password" id="passwordLu">
+                                <i class="fa fa-eye" id="show-passwordLu"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <hr>
+
+                            <button type="submit" value="send" class="lrbtn" id="ULogin">Login</button>
+
+                            <p><a href="" style="color: white;">Forgot Password?</a></p>
+                            <span style="float:right;margin-top:-8%;">Create an Account? <a href="#"
+                                    onclick="document.getElementById('id00').style.display = 'block'; document.getElementById('id01').style.display = 'none'">
+                                    Register</a></span>
+                        </div>
+
+                        <!-- Admin -->
+                        <div class="containerL" id="id002">
+                            <div class="form-control">
+                                <input type="email" placeholder="Email Address" name="email" id="emailLa" required>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <div class="form-control">
+                                <input type="password" placeholder="Password" name="password" id="passwordLa">
+                                <i class="fa fa-eye" id="show-passwordLa"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <div class="form-control">
+                                <input type="password" placeholder="Security Key" name="SecurityKey" id="SecurityKey">
+                                <i class="fa fa-eye" id="show-key"></i>
+                                <i class="fa fa-check-circle"></i>
+                                <i class="fa fa-exclamation-circle"></i>
+                                <small>Error message</small>
+                            </div>
+
+                            <hr>
+
+                            <button type="submit" value="send" class="lrbtn" id="ALogin">Login</button>
+
+                            <p><a href="" style="color: white;">Forgot Password?</a></p>
+                            <span style="float:right;margin-top:-8%;">Create an Account? <a href="#"
+                                    onclick="document.getElementById('id00').style.display = 'block';document.getElementById('id01').style.display = 'none'">
+                                    Register</a></span>
+                        </div>
+                </div>
+                </form>
+            </div>
+            <script type="text/javascript" src="Javascript/Login.js"></script>
+        </div>
+    </div>
+    </div>
+
+    <!--Background-->
+    <div class="background">
+    </div>
+
+    <!--About Us-->
+    <div class="leftdiv About-Us" id="AboutUs">
+        <div class="leftdiv">
+            <hr>
+            <i>
+                <p style="font-size:36px;text-align:center;font-weight:bold;">Placement Cell Management
+                    System</p>
+            </i>
+            <p class="About-para" style="border: 1px solid black;">
+                The increasing advantages of automated systems now are at the highest position as a result, many manual
+                processes are automated. Since the automated system is in demand nowadays.Job Portal is the operation,
+                control, and oversight of real estate management that indicates a need to be cared for, and monitored.
+                Accountability is given for its useful life and condition. This is much akin to the role of management
+                in any business.Job Portal is also the management of personal property, equipment, tooling, and physical
+                capital assets acquired and used to build, repair, and maintain end-item deliverables. Job Portal
+                involves the processes, systems, and manpower required to manage the life cycle of all acquired property
+                as defined above including acquisition, control, accountability, responsibility, maintenance,
+                utilization, and disposition.
+                <!-- For example, an owner of a single-family may engage the services of a
+                property management company. The company will then advertise the rental property, handle tenant
+                inquiries, screen applicants, select suitable candidates, draw up a lease agreement, conduct a move-in
+                inspection, move the tenant (s) into the property, and collect rental income. The company will then
+                coordinate any maintenance issues, and supply the owner(s) with financial statements and any relevant
+                information regarding the property, etc. -->
+                This is a web application for the training and placement of
+                students. This system can be accessed throughout the organization with proper login credentials.
+                Students will be able to upload their personal and educational information, which the system will manage
+                efficiently. The main objective of this system is to manage the details of the Student, to reduce manual
+                work and time. To offer recruitment to applicants.
+            </p>
+        </div>
+
+        <div id="About" class="leftdiv" style="background-color: black;">
+            <p style="font-size:36px;text-align:center;font-weight: bold;color:white;"><u><i>Meet the Team</i></u>
+            </p>
+            <div class="leftdiv">
+                <div class="container">
+                    <img src="Images/adi.jpg" alt="Photo">
+                    <span><b>Aditya</b><br>B.Sc. Hons. Computer Science</span>
+                </div>
+
+                <div class="container">
+                    <img src="Images/kanika.jpg" alt="Photo">
+                    <span><b>Kanika</b><br>B.Sc. Hons. Computer Science</span>
+                </div>
+
+                <div class="container">
+                    <img src="Images/kushal.jpg" alt="Photo">
+                    <span><b>Kushal</b><br>B.Sc. Hons. Computer Science</span>
+                </div>
+
+                <div class="container">
+                    <img src="Images/vishal.jpg" alt="Photo">
+                    <span><b>Vishal</b><br>B.Sc. Hons. Computer Science</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="space leftdiv" style="background-color:black;">
+    </div>
+
+    <div class="space leftdiv" style="background-color:white;">
+    </div>
+
+    <div class="space leftdiv" style="background-color:white;">
+    </div>
+
+    <!--Slideshow-->
+    <div class="leftdiv slideshow" id="Events">
+        <p class="s1">Events <i class="fa fa-arrow-right"></i></p>
+        <div class="leftdiv slideshow-container1">
+            <div class="mySlides1 animationR">
+                <img src="Images/Placement3.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+            </div>
+
+            <div class="mySlides1 animationR">
+                <img src="Images/Placement1.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+            </div>
+
+            <div class="mySlides1 animationR">
+                <img src="Images/Placement2.jpg" onclick="prevSlide1();prevSlide2();prevSlide3();">
+            </div>
+
+            <div style="text-align:center;margin-top:-5vh;z-index:2;">
+                <span class="dot1"></span>
+                <span class="dot1"></span>
+                <span class="dot1"></span>
+            </div>
+        </div>
+        <div class="leftdiv slideshow-container2">
+            <div class="mySlides2 animationR">
+                <div class="numbertext">1/3</div>
+                <img src="Images/Placement1.jpg">
+            </div>
+
+            <div class="mySlides2 animationR">
+                <div class="numbertext">2/3</div>
+                <img src="Images/Placement2.jpg">
+            </div>
+
+            <div class="mySlides2 animationR">
+                <div class="numbertext">3/3</div>
+                <img src="Images/Placement3.jpg">
+            </div>
+
+            <div style="text-align:center;margin-top:5px;z-index:2;">
+                <span class="dot2"></span>
+                <span class="dot2"></span>
+                <span class="dot2"></span>
+            </div>
+
+            <a class="prev" onclick="prevSlide1();prevSlide2();prevSlide3();">&#10094;</a>
+            <a class="next" onclick="showSlides1();showSlides2();showSlides3();">&#10095;</a>
+        </div>
+        <div class="leftdiv slideshow-container3">
+            <div class="mySlides3 animationR">
+                <img src="Images/Placement2.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+            </div>
+
+            <div class="mySlides3 animationR">
+                <img src="Images/Placement3.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+            </div>
+
+            <div class="mySlides3 animationR">
+                <img src="Images/Placement1.jpg" onclick="showSlides1();showSlides2();showSlides3();">
+            </div>
+
+            <div style="text-align:center;margin-top:-5vh;z-index:2;">
+                <span class="dot3"></span>
+                <span class="dot3"></span>
+                <span class="dot3"></span>
+            </div>
+        </div>
+        <script type="text/javascript" src="Javascript/Slideshow.js"></script>
+    </div>
+
+    <div class="leftdiv space" style="background-color:black;">
+    </div>
+
+    <!--ShowCase-->
+    <div class="leftdiv showcase" id="Drives">
+        <!--Space-->
+        <div class="leftdiv space">
+        </div>
+        <p class="t1">Drives <i class="fa fa-arrow-right"></i></p>
+        <section id="product" class="section-p1">
+            <div class="containerpro">
+                <div class="pro" onclick="function1()">
+                    <img src="Images/Placement.jpeg" alt="Placememt">
+                    <span><b>Placememt</b></span>
+                </div>
+
+                <div class="pro" onclick="function1()">
+                    <img src="Images/Internship.jpeg" alt="Internship">
+                    <span><b>Internship</b></span>
+                </div>
+
+                <div class="pro" onclick="function1()">
+                    <img src="Images/Blog.jpeg" alt="Blog">
+                    <span><b>Blog</b></span>
+                </div>
+            </div>
+        </section>
+        <script>
+            function function1() { swal("Oops..!", "Please login first..!", "error"); }
+        </script>
+    </div>
+
+    <div class="leftdiv space">
+    </div>
+
+    <!--Footer-->
+    <div class="leftdiv footer" id="footer">
+        <footer class="footer-distributed">
+            <div class="footer-left">
+                <h3>AKKV</h3>
+                <p class="footer-links">
+                    <!-- <a href="HTML/blog.html"> Blog </a> -->
+                    <a href="HTML/feedback.html"> Feedback </a>
+                    <a href="#AboutUs"> About Us </a>
+                    <a href="mailto:kushal4055@rla.du.ac.in" target="_blank"> Contact </a>
+                </p>
+                <p class="footer-company-name">RLA © 2023</p>
+                <div class="footer-icons" style="background-color:#ffffff00;">
+                    <a href="https://www.instagram.com/placementcell_rlac/?hl=en"><i class="fa fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/pathwaysrlac/"><i class="fa fa-facebook"></i></a>
+                    <a href="https://in.linkedin.com/company/theplacementcell"><i class="fa fa-linkedin"></i></a>
+
+                </div>
+            </div>
+
+            <!--Home button-->
+            <div class="rightdiv">
+                <a href="#Home" id="upper"><i class="fa fa-arrow-up"
+                        style="font-size:xx-large;font-weight:bold;text-align:center;margin-top:14%;"></i></a>
+                <script type="text/javascript" src="Javascript/UpperButton.js"></script>
+            </div>
+        </footer>
+    </div>
+
+</body>
+
+</html>

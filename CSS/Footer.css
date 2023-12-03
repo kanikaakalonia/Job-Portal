@@ -1,0 +1,132 @@
+* {
+	font-family: Roboto;
+}
+
+.footer-distributed {
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	font: bold 16px sans-serif;
+	text-align: left;
+	padding: 30px 60px 40px;
+	overflow: hidden;
+}
+
+.section {
+	width: 100%;
+	display: inline-block;
+	background: #ccc;
+	height: 60vh;
+	text-align: center;
+	font-size: 22px;
+	font-weight: 500;
+	text-decoration: underline;
+}
+
+/* Footer left */
+.footer-distributed .footer-left {
+	float: left;
+}
+
+/* The company logo */
+.footer-distributed h3 {
+	color: #5383d3;
+	font: normal 36px 'Roboto', cursive;
+	margin: 0 0 10px;
+}
+
+/* Footer links */
+.footer-distributed .footer-links {
+	color: #ffffff;
+	margin: 0 0 10px;
+	padding: 0;
+}
+
+.footer-distributed .footer-links a {
+	display: inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color: inherit;
+	margin-right: 7px;
+	background-color: #ffffff00;
+	border: none;
+}
+
+.footer-distributed .footer-company-name {
+	color: #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+
+/* Footer social icons */
+.footer-distributed .footer-icons {
+	margin-top: 40px;
+	border: none;
+}
+
+.footer-distributed .footer-icons a {
+	display: inline-block;
+	width: 30px;
+	height: 30px;
+	cursor: pointer;
+	background-color: #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+
+.footer-distributed .footer-icons i {
+	text-align: center;
+	font-size: large;
+	margin-top: 10%;
+	border: none;
+}
+
+/* Footer Right */
+.footer-distributed .footer-right {
+	float: right;
+}
+
+.footer-distributed .footer-right p {
+	display: inline-block;
+	vertical-align: top;
+	margin: 15px 42px 0 0;
+	color: #ffffff;
+}
+
+/* The contact form */
+.footer-distributed form {
+	display: inline-block;
+}
+
+/*Right side upper arrow*/
+#upper {
+	background-color: #454545;
+	width: 50px;
+	height: 50px;
+	position: fixed;
+	color: #add8f6;
+	bottom: 8px;
+	display: block;
+	margin-top: 5px;
+	margin-bottom: auto;
+	transition: bottom 0.3s;
+	text-align: center;
+	border-radius: 4px;
+	opacity: 0.7;
+}
+
+#upper a {
+	display: block;
+	color: white;
+	text-decoration: none;
+}
+
+#upper:hover {
+	opacity: 1;
+}

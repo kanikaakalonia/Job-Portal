@@ -117,9 +117,9 @@ Register.onclick = (e) => {
 
 	if (VaildForm()) {
 		//now store this data in your web browser store
-		localStorage.setItem('Username', usernameS);
-		localStorage.setItem('Email', emailS);
-		localStorage.setItem('Password', passwordS);
+		localStorage.setItem('Username', JSON.stringify(usernameS));
+		localStorage.setItem('Email', JSON.stringify(emailS));
+		localStorage.setItem('Password', JSON.stringify(passwordS));
 		//localStorage.setItem('Confirm_Password', cpasswordS);
 	}
 
